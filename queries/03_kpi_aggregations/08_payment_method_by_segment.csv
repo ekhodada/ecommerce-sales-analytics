@@ -1,0 +1,21 @@
+customer_segment,payment_method,order_count,revenue,pct_of_segment
+Bronze,Debit Card,1099,415395.64,21.8
+Bronze,Bank Transfer,1033,394612.80,20.5
+Bronze,Credit Card,1021,402275.04,20.3
+Bronze,PayPal,967,413460.07,19.2
+Bronze,Gift Card,917,378646.89,18.2
+Gold,PayPal,661,269090.59,22.5
+Gold,Credit Card,614,238666.31,20.9
+Gold,Gift Card,570,251217.37,19.4
+Gold,Bank Transfer,566,188140.10,19.2
+Gold,Debit Card,532,230598.73,18.1
+Platinum,Bank Transfer,326,122710.82,23.0
+Platinum,PayPal,294,109203.13,20.8
+Platinum,Debit Card,290,116869.46,20.5
+Platinum,Credit Card,286,135329.43,20.2
+Platinum,Gift Card,220,93351.57,15.5
+Silver,Credit Card,1070,419548.17,21.2
+Silver,Bank Transfer,1057,420305.57,20.9
+Silver,Gift Card,984,415308.92,19.5
+Silver,PayPal,973,413098.13,19.3
+Silver,Debit Card,970,368935.45,19.2

@@ -1,0 +1,8 @@
+employee_id,sales_rep,role,region_name,orders_handled,unique_customers,total_revenue,avg_order_item_value
+4,David Kim,Sales Rep,Southwest,715,406,918846.39,412.41
+1,Alice Nguyen,Senior Sales Rep,Northeast,713,419,861950.05,400.35
+2,Brian Patel,Sales Rep,Southeast,675,396,856887.95,421.49
+5,Emily Johnson,Sales Rep,West,692,405,807682.82,393.99
+9,Irene Davis,Sales Rep,Southwest,670,406,787399.89,398.89
+3,Carmen Lopez,Sales Manager,Midwest,677,404,783166.65,382.59
+8,Henry Zhang,Senior Sales Rep,Midwest,692,410,780830.44,397.37

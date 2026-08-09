@@ -1,0 +1,5 @@
+table_name,check_name,check_type,records_checked,records_failed,threshold_pct,status,notes
+dim_customers,Invalid customer_segment value,Validity,600,0,0.0,PASS,
+dim_products,Cost price >= unit price (negative or zero margin),Validity,25,0,0.0,PASS,Every product should have a positive margin
+fact_order_items,Unit price zero or negative,Validity,14957,0,0.0,PASS,All sold items must have a positive price
+fact_orders,Invalid order_status value,Validity,5000,0,0.0,PASS,

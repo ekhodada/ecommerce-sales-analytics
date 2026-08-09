@@ -1,0 +1,4 @@
+table_name,check_name,check_type,records_checked,records_failed,threshold_pct,status,notes
+dim_customers,"Null critical fields (email, registration_date)",Completeness,600,0,1.0,PASS,Email and registration_date are required for all customers
+fact_order_items,Null product_id or quantity,Completeness,14957,0,0.0,PASS,
+fact_orders,Null FK or order_date,Completeness,5000,0,0.0,PASS,customer_id and order_date are mandatory on every order

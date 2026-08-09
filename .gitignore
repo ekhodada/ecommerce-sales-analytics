@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Jupyter / Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+.env
+
+# Tableau temporary files
+*.twbx.bak

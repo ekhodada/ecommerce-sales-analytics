@@ -1,0 +1,4 @@
+psql:/Users/elnaz/Desktop/data/queries/04_window_functions/07_customer_revenue_percentiles.sql:20: ERROR:  function round(double precision, integer) does not exist
+LINE 16:     ROUND(PERCENT_RANK() OVER (ORDER BY lifetime_value) * 10...
+             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.

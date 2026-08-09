@@ -1,0 +1,4 @@
+table_name,check_name,check_type,records_checked,records_failed,threshold_pct,status,notes
+fact_orders,Orphan customer_id (no match in dim_customers),Consistency,5000,0,0.0,PASS,
+fact_orders,Ship date precedes order date,Consistency,4486,0,0.0,PASS,
+fact_returns,Return linked to non-Delivered order,Consistency,630,0,0.0,PASS,Only delivered orders can generate returns

@@ -1,0 +1,21 @@
+customer_id,customer_name,customer_segment,total_orders,total_returns,return_rate_pct
+50,Joshua Riggs,Silver,4,4,100.0
+126,Valerie Peck,Bronze,4,3,75.0
+280,Kristina Perez,Gold,3,2,66.7
+358,Crystal Ramirez,Silver,3,2,66.7
+246,Donald Bush,Gold,6,4,66.7
+268,Angela Gonzales,Gold,3,2,66.7
+366,Julia Price,Bronze,3,2,66.7
+83,Joseph Rios,Silver,6,4,66.7
+370,Donald Hoover,Platinum,8,5,62.5
+428,Dawn Wilcox,Bronze,8,5,62.5
+461,Wesley Fischer,Silver,5,3,60.0
+567,Victoria Chavez,Gold,5,3,60.0
+401,Kirsten Martinez,Silver,7,4,57.1
+174,Karen Martin,Gold,7,4,57.1
+144,Pamela Martin,Bronze,7,4,57.1
+353,Devin Williams,Bronze,9,5,55.6
+292,Rachel Medina,Bronze,6,3,50.0
+462,Melissa Hopkins,Platinum,6,3,50.0
+111,Robin Rodriguez,Bronze,6,3,50.0
+139,Brittany Drake,Silver,4,2,50.0

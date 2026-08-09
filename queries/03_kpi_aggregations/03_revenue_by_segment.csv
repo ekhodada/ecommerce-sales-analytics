@@ -1,0 +1,5 @@
+customer_segment,customers,orders,revenue,revenue_per_customer,avg_line_value
+Silver,207,1691,2037196.24,9841.53,403.09
+Bronze,207,1690,2004390.44,9683.05,397.93
+Gold,122,964,1177713.10,9653.39,400.17
+Platinum,64,489,577464.41,9022.88,407.81

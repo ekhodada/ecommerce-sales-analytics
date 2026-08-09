@@ -1,0 +1,3 @@
+table_name,check_name,check_type,records_checked,records_failed,threshold_pct,status,notes
+dim_customers,Duplicate email addresses,Uniqueness,600,0,0.0,PASS,Email must be unique across all customers
+fact_order_items,"Duplicate (order_id, product_id) combinations",Uniqueness,14957,0,0.0,PASS,Each product should appear once per order line

@@ -1,0 +1,6 @@
+status,check_type,checks_run,total_records_failed
+WARNING,Validity,1,0
+PASS,Completeness,3,0
+PASS,Consistency,4,0
+PASS,Uniqueness,2,0
+PASS,Validity,4,0

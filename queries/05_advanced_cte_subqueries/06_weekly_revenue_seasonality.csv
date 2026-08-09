@@ -1,0 +1,8 @@
+day_name,day_num,orders,revenue,avg_item_value,day_type
+Monday,1,690,749138.60,375.88,Weekday
+Tuesday,2,680,845404.67,417.28,Weekday
+Wednesday,3,686,828209.26,397.99,Weekday
+Thursday,4,726,850849.20,375.32,Weekday
+Friday,5,708,888659.33,420.97,Weekday
+Saturday,6,660,832850.50,428.86,Weekend
+Sunday,7,684,801652.63,394.90,Weekend

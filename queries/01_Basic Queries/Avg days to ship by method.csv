@@ -1,0 +1,5 @@
+"shipping_method","orders_shipped","avg_days_to_ship","min_days","max_days"
+"Express",1086,2.9,1,5
+"Overnight",1154,3.0,1,5
+"Store Pickup",1115,3.1,1,5
+"Standard",1131,3.1,1,5

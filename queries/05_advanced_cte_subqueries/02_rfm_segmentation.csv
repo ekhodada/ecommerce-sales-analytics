@@ -1,0 +1,601 @@
+customer_id,customer_name,customer_segment,recency_days,frequency,monetary,r_score,f_score,m_score,rfm_total,rfm_segment
+488,Brandon Wilson,Gold,433,3,3436.18,5,5,5,15,Champions
+12,Heather Cross,Silver,239,5,3781.61,5,5,5,15,Champions
+493,Jose Spencer,Silver,440,5,3041.23,5,5,5,15,Champions
+348,Nicole Smith,Bronze,156,4,2196.69,5,5,5,15,Champions
+58,George Meza,Bronze,417,4,1260.96,5,5,5,15,Champions
+207,Christine Miller,Gold,402,5,2793.03,5,5,5,15,Champions
+557,Katie Jordan,Silver,614,3,1209.96,5,5,5,15,Champions
+449,Anthony White,Bronze,163,5,4030.15,5,5,5,15,Champions
+254,Adrian Jimenez,Gold,848,2,905.77,5,5,5,15,Champions
+574,Jennifer Washington,Silver,165,4,3475.41,5,5,5,15,Champions
+431,Stephanie Hall,Gold,171,4,2957.34,5,5,5,15,Champions
+330,Michael Johnson,Gold,330,2,4824.47,5,5,5,15,Champions
+500,Kara Smith,Gold,330,3,2367.18,5,5,5,15,Champions
+231,Kathy Beard,Bronze,323,5,3798.61,5,5,5,15,Champions
+422,Edward Patterson,Bronze,320,2,505.95,5,5,5,15,Champions
+485,Jay Johnson,Bronze,177,5,3960.24,5,5,5,15,Champions
+6,Tasha Valencia,Silver,185,3,766.88,5,5,5,15,Champions
+211,Andrew Compton,Bronze,277,4,2152.60,5,5,5,15,Champions
+580,Timothy Gonzales,Silver,190,2,1808.32,5,5,5,15,Champions
+467,Anthony Wang,Silver,699,5,4938.17,5,5,5,15,Champions
+296,Joan Greer,Bronze,268,5,2708.23,5,5,5,15,Champions
+448,Caitlyn Nelson,Gold,506,3,1825.26,5,5,5,15,Champions
+210,Zachary Marsh,Bronze,196,3,3716.19,5,5,5,15,Champions
+177,Kristie Moore,Gold,206,4,2176.03,5,5,5,15,Champions
+43,Kelly Brooks,Silver,213,5,3137.65,5,5,5,15,Champions
+293,Tyler Ward,Bronze,649,4,4184.66,5,5,5,15,Champions
+141,Latoya Yu,Gold,221,3,2234.31,5,5,5,15,Champions
+132,Katherine Bennett,Silver,213,5,3101.54,5,5,5,15,Champions
+433,Christopher White,Bronze,515,4,3227.66,5,5,5,15,Champions
+38,Kathleen Harris,Bronze,240,4,1127.80,5,5,5,15,Champions
+62,Paul King,Platinum,433,4,1517.68,5,5,5,15,Champions
+72,Erin Cisneros,Platinum,236,6,2975.61,5,4,5,14,Champions
+157,Thomas Delacruz,Gold,103,2,1043.05,4,5,5,14,Champions
+55,Diane Jones,Silver,232,4,5696.35,5,5,4,14,Champions
+351,Samantha Ramos,Silver,226,7,3365.50,5,4,5,14,Champions
+91,Sean Padilla,Silver,174,4,6263.44,5,5,4,14,Champions
+253,Charles Smith,Silver,111,5,2337.96,4,5,5,14,Champions
+354,Robert Gonzalez,Gold,364,7,3354.15,5,4,5,14,Champions
+346,Mitchell Lee,Platinum,451,4,7458.96,5,5,4,14,Champions
+15,Cassandra Robbins,Gold,216,6,4097.46,5,4,5,14,Champions
+23,Christopher Hernandez,Silver,124,4,3951.76,4,5,5,14,Champions
+391,Dustin Ortega,Silver,456,3,7152.55,5,5,4,14,Champions
+453,Ryan Jackson,Platinum,115,4,1960.07,4,5,5,14,Champions
+593,Jeffrey Walsh,Silver,206,6,3987.67,5,4,5,14,Champions
+26,Amber Cooke,Gold,140,5,3792.96,4,5,5,14,Champions
+376,Deborah Roberts,Silver,140,1,484.47,4,5,5,14,Champions
+238,Dustin Johnson,Silver,577,5,7513.61,5,5,4,14,Champions
+359,Timothy Sosa,Platinum,152,5,2064.26,4,5,5,14,Champions
+550,Scott Rowland,Platinum,272,5,5901.60,5,5,4,14,Champions
+358,Crystal Ramirez,Silver,417,3,7293.47,5,5,4,14,Champions
+105,Kayla Friedman,Silver,250,6,3169.84,5,4,5,14,Champions
+584,Sophia Berry,Bronze,158,4,5913.90,5,5,4,14,Champions
+588,Donald Horne,Silver,99,6,2262.44,4,4,5,13,Champions
+20,Martha Torres,Gold,43,5,1939.73,3,5,5,13,Loyal Customers
+89,Richard Davis,Platinum,43,4,3949.65,3,5,5,13,Loyal Customers
+300,Rachel Adams,Bronze,40,4,3600.20,3,5,5,13,Loyal Customers
+484,Brian Bond,Bronze,343,7,7017.62,5,4,4,13,Champions
+534,Emily Jacobs,Platinum,277,8,3879.01,5,3,5,13,Loyal Customers
+46,David Ryan,Silver,271,8,4905.38,5,3,5,13,Loyal Customers
+415,Troy Patel,Bronze,270,7,5145.63,5,4,4,13,Champions
+107,Kelly Hughes,Silver,264,7,7786.83,5,4,4,13,Champions
+460,Jacob Yoder,Silver,261,8,2869.77,5,3,5,13,Loyal Customers
+474,Tina Stokes,Gold,248,6,5732.54,5,4,4,13,Champions
+227,Ana Dean,Silver,640,7,7349.86,5,4,4,13,Champions
+481,Jesse Chapman,Silver,214,4,9188.20,5,5,3,13,Loyal Customers
+310,Andrew Johnson,Gold,186,4,8171.23,5,5,3,13,Loyal Customers
+29,John Marshall,Gold,178,6,5618.67,5,4,4,13,Champions
+514,Derrick Aguirre,Bronze,173,3,8310.69,5,5,3,13,Loyal Customers
+75,Tanner Bird,Gold,166,7,6808.70,5,4,4,13,Champions
+267,Ronald Cain,Silver,158,7,7386.71,5,4,4,13,Champions
+35,Charles Martin,Bronze,151,7,3057.76,4,4,5,13,Champions
+483,Michael Jenkins,Bronze,151,6,3460.35,4,4,5,13,Champions
+36,Jeremy Craig,Gold,145,6,4874.97,4,4,5,13,Champions
+596,James Barrett,Bronze,143,6,4893.84,4,4,5,13,Champions
+172,Robert Lynch,Gold,142,6,3628.22,4,4,5,13,Champions
+420,Amy Meyers,Platinum,135,6,3229.14,4,4,5,13,Champions
+504,Bryan Williams,Bronze,124,6,4876.14,4,4,5,13,Champions
+96,Ronald Simpson,Bronze,496,7,7011.15,5,4,4,13,Champions
+219,Diane Hudson,Silver,118,6,2556.06,4,4,5,13,Champions
+313,Emily Anderson,Gold,116,7,4711.71,4,4,5,13,Champions
+252,Ryan Lawrence,Silver,109,6,3290.96,4,4,5,13,Champions
+364,Eric Cisneros,Silver,108,5,5631.19,4,5,4,13,Champions
+416,Melissa Phillips,Silver,107,4,7772.22,4,5,4,13,Champions
+389,Kristen Burch,Bronze,93,5,5496.59,4,5,4,13,Champions
+181,Amanda Taylor,Bronze,82,7,4334.03,4,4,5,13,Champions
+39,William Hill,Platinum,448,6,4979.76,5,4,4,13,Champions
+112,Edward Cuevas,Platinum,77,5,3487.52,3,5,5,13,Loyal Customers
+337,Isaac Singh,Gold,70,3,1534.39,3,5,5,13,Loyal Customers
+598,John Henry,Silver,68,4,770.36,3,5,5,13,Loyal Customers
+153,Christopher Johnson,Bronze,68,3,478.36,3,5,5,13,Loyal Customers
+168,Andrea Gray,Silver,60,5,3474.73,3,5,5,13,Loyal Customers
+402,William Moore,Gold,59,2,827.25,3,5,5,13,Loyal Customers
+189,Robert Rivera,Bronze,55,4,3352.03,3,5,5,13,Loyal Customers
+133,Elaine Anderson,Bronze,55,4,3169.19,3,5,5,13,Loyal Customers
+184,Ryan Larsen,Silver,51,3,3899.77,3,5,5,13,Loyal Customers
+98,Jason Lee,Platinum,36,3,2261.17,2,5,5,12,At Risk
+334,Jennifer Stone,Bronze,24,3,4675.19,2,5,5,12,At Risk
+80,Nicole Pena,Silver,68,5,7786.15,3,5,4,12,Loyal Customers
+320,Mckenzie Mills,Bronze,149,7,7468.55,4,4,4,12,Champions
+478,Larry Montgomery,Silver,143,7,6658.81,4,4,4,12,Champions
+472,Sydney Mcdonald,Silver,50,6,4757.61,3,4,5,12,Loyal Customers
+537,Samantha Anderson,Bronze,541,7,6358.25,5,3,4,12,Loyal Customers
+1,Danielle Johnson,Gold,40,4,5789.98,3,5,4,12,Loyal Customers
+8,Monique Henderson,Silver,129,6,7764.28,4,4,4,12,Champions
+426,Kathy Harrison,Gold,68,6,4763.21,3,4,5,12,Loyal Customers
+5,Donald Mcgee,Silver,43,6,3755.81,3,4,5,12,Loyal Customers
+336,Carolyn Ortiz,Silver,124,6,6671.24,4,4,4,12,Champions
+67,Chelsea Henderson,Bronze,44,5,7463.35,3,5,4,12,Loyal Customers
+47,Lynn Bentley,Silver,123,7,4966.36,4,3,5,12,Loyal Customers
+569,Kimberly Hart,Gold,16,4,3286.49,2,5,5,12,At Risk
+84,Bryan Taylor,Bronze,64,5,5045.87,3,5,4,12,Loyal Customers
+394,Sierra Wilson,Silver,16,5,2776.64,2,5,5,12,At Risk
+520,Sherry Parker,Gold,16,5,4530.13,2,5,5,12,At Risk
+291,Kimberly Mora,Silver,17,5,4824.49,2,5,5,12,At Risk
+297,Amy Cisneros,Gold,17,5,1905.82,2,5,5,12,At Risk
+120,Philip Thomas,Bronze,429,6,10294.14,5,4,3,12,Loyal Customers
+119,Ashley Patel,Bronze,101,8,1868.85,4,3,5,12,Loyal Customers
+562,Kathryn Brown,Silver,96,6,5245.62,4,4,4,12,Champions
+66,Wayne Young,Silver,91,8,4048.30,4,3,5,12,Loyal Customers
+447,Joseph Olson,Silver,20,5,1465.67,2,5,5,12,At Risk
+476,Amy Jones,Silver,91,5,8664.43,4,5,3,12,Loyal Customers
+214,Eric Townsend,Silver,89,7,7490.54,4,4,4,12,Champions
+32,Travis Salas,Platinum,85,8,3367.51,4,3,5,12,Loyal Customers
+142,Danielle Garcia,Silver,80,5,5404.34,3,5,4,12,Loyal Customers
+226,James Brooks,Silver,48,5,6558.70,3,5,4,12,Loyal Customers
+212,Kimberly Jones,Platinum,212,6,9438.97,5,4,3,12,Loyal Customers
+525,Mason Choi,Bronze,242,7,9579.39,5,4,3,12,Loyal Customers
+294,Yolanda Vasquez,Platinum,273,7,10149.93,5,4,3,12,Loyal Customers
+510,Nicole Simpson,Silver,78,4,6985.10,3,5,4,12,Loyal Customers
+545,William Berg,Bronze,281,6,8468.81,5,4,3,12,Loyal Customers
+425,Jason Walker,Bronze,57,5,5636.66,3,5,4,12,Loyal Customers
+11,Corey Pearson,Bronze,307,7,9696.87,5,4,3,12,Loyal Customers
+469,Kevin Collins,Bronze,71,5,5362.77,3,5,4,12,Loyal Customers
+251,Laura Frazier,Gold,342,8,5189.73,5,3,4,12,Loyal Customers
+218,Bruce Grant,Silver,169,6,10052.71,5,4,3,12,Loyal Customers
+471,James Castillo,Bronze,166,9,5856.50,5,3,4,12,Loyal Customers
+280,Kristina Perez,Gold,52,3,7373.78,3,5,4,12,Loyal Customers
+103,Megan Newman,Silver,165,8,6426.00,5,3,4,12,Loyal Customers
+70,Benjamin Lucas,Silver,378,6,8229.81,5,4,3,12,Loyal Customers
+93,Debbie Fisher,Gold,69,5,7406.84,3,5,4,12,Loyal Customers
+382,Johnny Turner,Bronze,405,8,7186.86,5,3,4,12,Loyal Customers
+167,Elizabeth Davidson,Gold,37,4,1645.44,2,5,5,12,At Risk
+556,Nathaniel Knight,Bronze,3,5,2369.31,1,5,5,11,At Risk
+429,Alex Browning,Bronze,2,5,3821.91,1,5,5,11,At Risk
+56,Scott Nelson,Platinum,48,7,4823.74,3,3,5,11,Loyal Customers
+388,Christopher Graham,Platinum,101,7,10139.44,4,4,3,11,Loyal Customers
+268,Angela Gonzales,Gold,51,4,8004.87,3,5,3,11,Loyal Customers
+356,Bradley Johnson,Silver,19,5,5712.67,2,5,4,11,At Risk
+540,Jennifer Allen,Bronze,5,4,3335.24,1,5,5,11,At Risk
+466,Kenneth Ho,Silver,95,8,5879.24,4,3,4,11,Loyal Customers
+419,Cathy Jones,Silver,61,6,7713.45,3,4,4,11,Loyal Customers
+155,Vanessa Davidson,Silver,11,4,3910.47,1,5,5,11,At Risk
+99,Leah Bowen,Bronze,194,6,10588.79,5,4,2,11,Loyal Customers
+292,Rachel Medina,Bronze,24,7,4584.36,2,4,5,11,At Risk
+77,Matthew Bradshaw,Platinum,143,7,9848.63,4,4,3,11,Loyal Customers
+263,Peter Hernandez,Gold,68,7,5404.47,3,4,4,11,Loyal Customers
+577,Matthew Jensen,Silver,172,9,5555.97,5,2,4,11,New Customers
+461,Wesley Fischer,Silver,156,6,10005.34,4,4,3,11,Loyal Customers
+44,Albert Ballard,Bronze,157,6,12469.30,5,4,2,11,Loyal Customers
+118,Scott Robinson,Bronze,40,5,9210.89,3,5,3,11,Loyal Customers
+81,Erin Wilson,Gold,88,6,8719.12,4,4,3,11,Loyal Customers
+232,Kimberly Anderson,Platinum,136,8,7605.66,4,3,4,11,Loyal Customers
+182,Rebecca York,Bronze,29,5,5195.21,2,5,4,11,At Risk
+567,Victoria Chavez,Gold,132,8,6898.32,4,3,4,11,Loyal Customers
+331,Richard Becker,Bronze,87,8,5341.00,4,3,4,11,Loyal Customers
+498,Michelle Kaiser,Silver,126,8,5012.51,4,3,4,11,Loyal Customers
+368,Cody Hale,Gold,385,7,8212.59,5,3,3,11,Loyal Customers
+215,Todd Kim,Silver,2,4,2452.78,1,5,5,11,At Risk
+446,Amy Moore,Bronze,294,9,5962.23,5,2,4,11,New Customers
+247,Holly Jensen,Bronze,14,2,4897.64,1,5,5,11,At Risk
+305,Megan Young,Bronze,80,6,5054.15,3,4,4,11,Loyal Customers
+129,Alexandria Baker,Platinum,15,5,4272.28,1,5,5,11,At Risk
+451,Carolyn Garza,Platinum,175,8,10199.35,5,3,3,11,Loyal Customers
+284,Kyle Griffin,Bronze,31,6,3343.73,2,4,5,11,At Risk
+332,Jessica Singh,Gold,54,7,7313.44,3,4,4,11,Loyal Customers
+3,Janet Williams,Bronze,15,5,5309.11,2,5,4,11,At Risk
+298,Ashley Henry,Silver,15,5,5839.97,2,5,4,11,At Risk
+197,Michael Ochoa,Bronze,119,7,6560.49,4,3,4,11,Loyal Customers
+406,Adam Stevens,Bronze,53,7,5807.58,3,4,4,11,Loyal Customers
+269,Shannon Allen,Gold,79,8,2903.31,3,3,5,11,Loyal Customers
+115,Michael Bruce,Silver,117,6,8883.35,4,4,3,11,Loyal Customers
+139,Brittany Drake,Silver,78,4,8722.58,3,5,3,11,Loyal Customers
+377,Stephanie Williams,Silver,219,10,7619.82,5,2,4,11,New Customers
+170,Nathaniel Rodriguez,Gold,63,5,7162.89,3,4,4,11,Loyal Customers
+290,Melissa Thomas,Platinum,45,6,5571.26,3,4,4,11,Loyal Customers
+392,Jill Leblanc,Silver,222,7,13484.36,5,4,2,11,Loyal Customers
+19,April Drake,Bronze,33,7,3264.38,2,4,5,11,At Risk
+367,Alicia Kent,Bronze,111,6,9446.15,4,4,3,11,Loyal Customers
+154,Dawn Coleman,Bronze,6,4,4109.75,1,5,5,11,At Risk
+69,Gregory Maxwell,Silver,17,4,7201.67,2,5,4,11,At Risk
+561,Michael Bautista,Bronze,50,6,6940.27,3,4,4,11,Loyal Customers
+179,Roger Garcia,Silver,109,9,4230.68,4,2,5,11,New Customers
+339,Sharon White,Platinum,62,8,4462.71,3,3,5,11,Loyal Customers
+213,Crystal Williams,Bronze,61,8,3544.54,3,3,5,11,Loyal Customers
+51,Daniel Gordon,Gold,45,7,3732.37,3,3,5,11,Loyal Customers
+414,Jennifer Snow,Bronze,36,6,7091.21,2,4,4,10,At Risk
+97,Dennis Sanchez,Bronze,3,5,6157.42,1,5,4,10,At Risk
+193,Alexandra Meyer,Silver,5,7,4761.54,1,4,5,10,At Risk
+531,Amy White,Bronze,6,5,7790.07,1,5,4,10,At Risk
+17,Harry Middleton,Gold,6,5,5393.39,1,5,4,10,At Risk
+124,Edward Jenkins,Silver,10,6,3504.21,1,4,5,10,At Risk
+357,Mike Watson,Bronze,11,6,4255.63,1,4,5,10,At Risk
+13,Richard David,Silver,12,5,6935.81,1,5,4,10,At Risk
+152,Joshua Colon,Platinum,14,7,4252.06,1,4,5,10,At Risk
+544,Eric Walters,Silver,15,7,3529.93,2,3,5,10,At Risk
+113,Kevin Patrick,Silver,15,5,8346.40,2,5,3,10,At Risk
+527,Jessica Coleman,Bronze,19,6,7551.16,2,4,4,10,At Risk
+430,Susan Porter,Platinum,19,7,5305.45,2,4,4,10,At Risk
+486,Juan Fleming,Gold,22,8,3909.72,2,3,5,10,At Risk
+505,Raymond Washington,Gold,22,7,5032.94,2,4,4,10,At Risk
+302,Madison Wagner,Bronze,24,7,7051.62,2,4,4,10,At Risk
+150,Pamela Rivera,Gold,26,5,9497.72,2,5,3,10,At Risk
+45,Randy Smith,Silver,28,5,8748.30,2,5,3,10,At Risk
+208,Stephen Curry,Bronze,29,8,2890.19,2,3,5,10,At Risk
+349,Nicole Aguirre,Silver,31,6,6256.23,2,4,4,10,At Risk
+578,Susan Morris,Bronze,33,7,6349.70,2,4,4,10,At Risk
+135,John Murray,Bronze,35,8,4216.95,2,3,5,10,At Risk
+21,John Alvarez,Bronze,37,6,6413.64,2,4,4,10,At Risk
+470,Brian Martinez,Gold,38,8,4265.14,2,3,5,10,At Risk
+404,Zachary Cuevas,Gold,40,5,10604.11,3,5,2,10,Loyal Customers
+123,David Jones,Bronze,43,7,9105.31,3,4,3,10,Loyal Customers
+54,Eric Olson,Gold,45,7,10029.27,3,4,3,10,Loyal Customers
+352,Sharon Logan,Silver,47,6,9587.03,3,4,3,10,Loyal Customers
+543,Heather Ellis,Silver,52,7,5595.02,3,3,4,10,Loyal Customers
+28,Matthew Atkinson,Silver,67,7,8691.47,3,4,3,10,Loyal Customers
+140,Aaron Hardin,Bronze,69,6,8353.48,3,4,3,10,Loyal Customers
+523,Thomas Rogers,Bronze,71,7,5118.58,3,3,4,10,Loyal Customers
+10,Donna Gomez,Silver,76,8,7399.12,3,3,4,10,Loyal Customers
+399,Michael Anderson,Silver,79,8,6638.52,3,3,4,10,Loyal Customers
+250,Carmen Jennings,Silver,80,5,11129.62,3,5,2,10,Loyal Customers
+104,Karen Marquez,Silver,85,9,6227.19,4,2,4,10,New Customers
+468,Steve Brown,Bronze,87,7,8294.69,4,3,3,10,Loyal Customers
+40,Mary Carpenter,Bronze,87,6,11276.64,4,4,2,10,Loyal Customers
+398,Brandon Bautista,Silver,87,8,8876.75,4,3,3,10,Loyal Customers
+384,Matthew Richards,Bronze,88,9,5742.71,4,2,4,10,New Customers
+325,Bryan Orozco,Bronze,93,10,6199.94,4,2,4,10,New Customers
+559,Dominique Harris,Silver,98,8,10013.59,4,3,3,10,Loyal Customers
+240,Sara Mendez,Bronze,103,8,9022.66,4,3,3,10,Loyal Customers
+573,Heather Bauer,Bronze,105,6,10569.08,4,4,2,10,Loyal Customers
+502,Mary Shields,Bronze,108,7,11759.74,4,4,2,10,Loyal Customers
+174,Karen Martin,Gold,127,7,8449.88,4,3,3,10,Loyal Customers
+270,Joshua Lee,Silver,130,8,8748.02,4,3,3,10,Loyal Customers
+52,Jennifer James,Bronze,132,7,8042.98,4,3,3,10,Loyal Customers
+316,John Jimenez,Platinum,135,8,9537.23,4,3,3,10,Loyal Customers
+380,Patrick Parker,Gold,145,8,8021.62,4,3,3,10,Loyal Customers
+288,Amy Brennan,Platinum,150,6,10606.30,4,4,2,10,Loyal Customers
+230,Renee Murphy,Gold,165,10,8873.84,5,2,3,10,New Customers
+266,Jill Burns,Platinum,167,8,11232.63,5,3,2,10,Loyal Customers
+311,David Reeves,Silver,170,8,11618.02,5,3,2,10,Loyal Customers
+511,April King,Bronze,190,10,9225.20,5,2,3,10,New Customers
+242,Paula Ford,Platinum,196,7,16445.19,5,4,1,10,Loyal Customers
+202,Susan Cooper,Gold,259,10,8990.67,5,2,3,10,New Customers
+262,Chelsey White,Silver,263,8,10787.79,5,3,2,10,Loyal Customers
+173,Theresa Thompson,Gold,272,6,15003.02,5,4,1,10,Loyal Customers
+169,Emily Clements,Gold,362,6,15105.03,5,4,1,10,Loyal Customers
+347,Ashley Snyder,Bronze,376,7,12755.09,5,3,2,10,Loyal Customers
+489,Daniel Jones,Silver,378,7,13971.18,5,4,1,10,Loyal Customers
+535,Cheryl Chandler,Silver,392,7,12140.07,5,3,2,10,Loyal Customers
+465,Antonio Fitzpatrick,Silver,399,7,10463.40,5,3,2,10,Loyal Customers
+234,Angela Black,Platinum,10,8,3582.81,1,3,5,9,At Risk
+60,Michael Jones,Silver,97,10,8806.05,4,2,3,9,New Customers
+160,Pamela Cowan,Gold,61,9,5369.77,3,2,4,9,Potential Loyalists
+59,Lisa Young,Platinum,6,5,8695.89,1,5,3,9,At Risk
+50,Joshua Riggs,Silver,62,5,13125.55,3,4,2,9,Loyal Customers
+553,Krystal Nguyen,Silver,62,7,7925.62,3,3,3,9,Loyal Customers
+204,Shannon Cook,Gold,26,7,8914.79,2,4,3,9,At Risk
+64,John Wallace,Silver,63,8,9917.20,3,3,3,9,Loyal Customers
+156,Danielle Alvarez,Silver,237,12,9089.84,5,1,3,9,New Customers
+464,Shawn Robinson,Platinum,236,8,14213.41,5,3,1,9,Loyal Customers
+295,Mary Hardy,Bronze,6,7,7860.54,1,4,4,9,At Risk
+444,Kimberly Lopez,Gold,31,10,3050.60,2,2,5,9,Lost
+101,Carlos Hernandez,Silver,230,10,11764.41,5,2,2,9,New Customers
+575,Emily Mckee,Platinum,30,5,11487.28,2,5,2,9,At Risk
+327,Eric Clayton,Platinum,6,6,6437.23,1,4,4,9,At Risk
+371,Javier Horton,Platinum,49,5,14672.82,3,5,1,9,Loyal Customers
+326,Peter Butler,Silver,25,8,6680.77,2,3,4,9,At Risk
+71,Carrie Short,Bronze,220,8,15303.67,5,3,1,9,Loyal Customers
+92,Brian Ford,Bronze,44,8,9836.26,3,3,3,9,Loyal Customers
+572,Abigail Warren,Platinum,39,8,5883.34,2,3,4,9,At Risk
+533,Julia Miller,Gold,217,12,9805.60,5,1,3,9,New Customers
+4,Noah Mayo,Gold,205,11,10295.58,5,1,3,9,New Customers
+355,Heather Owens,Silver,70,10,5297.77,3,2,4,9,Potential Loyalists
+228,Donna Alvarado,Platinum,38,10,4196.57,2,2,5,9,Lost
+463,James Riley,Gold,23,5,10395.64,2,5,2,9,At Risk
+480,Anthony Casey,Silver,71,8,8680.21,3,3,3,9,Loyal Customers
+111,Robin Rodriguez,Bronze,72,8,9056.75,3,3,3,9,Loyal Customers
+165,Mary Vaughn,Gold,50,7,10250.14,3,3,3,9,Loyal Customers
+143,Brandon Kim,Bronze,195,10,11578.55,5,2,2,9,New Customers
+271,Darren Jacobson,Bronze,74,6,12989.71,3,4,2,9,Loyal Customers
+366,Julia Price,Bronze,8,5,8776.68,1,5,3,9,At Risk
+166,Teresa Anderson,Bronze,3,5,7869.26,1,5,3,9,At Risk
+243,Perry Larson,Gold,23,5,10833.60,2,5,2,9,At Risk
+372,Laura Rivas,Silver,29,6,10108.64,2,4,3,9,At Risk
+180,Andre Nunez,Silver,41,8,8842.16,3,3,3,9,Loyal Customers
+322,Richard Sandoval,Platinum,181,10,11971.20,5,2,2,9,New Customers
+76,Renee Brown,Bronze,8,6,5015.90,1,4,4,9,At Risk
+74,Gerald Reeves,Silver,22,5,12307.35,2,5,2,9,At Risk
+61,Lisa Monroe,Gold,4,5,10156.00,1,5,3,9,At Risk
+73,Alyssa Sanders,Silver,22,9,4210.48,2,2,5,9,Lost
+319,Ryan Simmons,Gold,84,11,7857.89,4,1,4,9,New Customers
+7,Samantha George,Gold,3,7,5504.36,1,4,4,9,At Risk
+138,Wayne Price,Bronze,21,8,6335.69,2,3,4,9,At Risk
+303,Michael Hernandez,Gold,168,8,18588.26,5,3,1,9,Loyal Customers
+224,Jeffrey Roberts,Bronze,376,9,15267.30,5,3,1,9,Loyal Customers
+261,Ashlee Coffey,Bronze,88,9,9132.56,4,2,3,9,New Customers
+558,Edward Foley,Bronze,33,7,10169.12,2,4,3,9,At Risk
+304,Anita Graham,Bronze,29,7,9476.14,2,4,3,9,At Risk
+199,Raymond Goodman,Silver,157,9,12478.15,5,2,2,9,New Customers
+496,Jason Stone,Bronze,53,7,7905.56,3,3,3,9,Loyal Customers
+487,Steven Church,Bronze,96,7,15990.18,4,4,1,9,Loyal Customers
+286,Elizabeth Roberts,Gold,19,6,9624.99,2,4,3,9,At Risk
+350,John Peterson,Bronze,97,7,14021.94,4,4,1,9,Loyal Customers
+79,Robert Estes,Bronze,0,7,6179.60,1,4,4,9,At Risk
+273,Cassandra Clarke,Bronze,28,7,8845.82,2,4,3,9,At Risk
+312,Rebecca Wood,Gold,100,9,8582.53,4,2,3,9,New Customers
+246,Donald Bush,Gold,34,7,9104.31,2,4,3,9,At Risk
+490,Daniel Lewis,Platinum,102,9,8029.75,4,2,3,9,New Customers
+289,Marie Pope,Silver,0,8,3269.18,1,3,5,9,At Risk
+462,Melissa Hopkins,Platinum,146,7,12015.18,4,3,2,9,Loyal Customers
+513,Jose Garcia,Gold,146,7,10393.57,4,3,2,9,Loyal Customers
+542,Maria Hardy,Platinum,139,9,9045.22,4,2,3,9,New Customers
+260,Alex Smith,Silver,13,7,5425.33,1,4,4,9,At Risk
+522,Taylor Johnson,Bronze,18,8,6479.50,2,3,4,9,At Risk
+590,Patricia Adkins,Bronze,136,8,12775.82,4,3,2,9,Loyal Customers
+428,Dawn Wilcox,Bronze,110,9,8748.29,4,2,3,9,New Customers
+53,Gloria Wells,Bronze,136,9,9810.75,4,2,3,9,New Customers
+526,Angela Rowe,Gold,13,4,8335.20,1,5,3,9,At Risk
+595,Katie Lopez,Bronze,273,12,10120.94,5,1,3,9,New Customers
+146,Amy Lopez,Silver,134,9,8289.48,4,2,3,9,New Customers
+144,Pamela Martin,Bronze,45,9,6563.93,3,2,4,9,Potential Loyalists
+548,John Gill,Silver,1,7,5085.50,1,4,4,9,At Risk
+581,David Pollard,Gold,272,8,17731.92,5,3,1,9,Loyal Customers
+259,Sara Cole,Bronze,130,7,11073.28,4,3,2,9,Loyal Customers
+65,Monique Williams,Platinum,128,11,7836.26,4,1,4,9,New Customers
+241,James Campbell,Platinum,3,6,7101.35,1,4,4,9,At Risk
+281,Anna Johnson,Bronze,126,10,8484.62,4,2,3,9,New Customers
+411,Tina Walker,Silver,60,9,5567.80,3,2,4,9,Potential Loyalists
+309,Lee Miller,Silver,27,10,3062.15,2,2,5,9,Lost
+318,Deborah Best,Silver,4,9,4796.13,1,2,5,8,Lost
+108,Kirsten Ward,Silver,199,11,12977.08,5,1,2,8,New Customers
+196,Jesse Jackson,Platinum,94,10,11922.55,4,2,2,8,New Customers
+272,Pamela Thomas,Gold,84,14,9968.64,4,1,3,8,New Customers
+395,David Miller,Silver,100,7,17400.94,4,3,1,8,Loyal Customers
+576,Kelly Jenkins,Bronze,10,8,5799.55,1,3,4,8,At Risk
+585,Christopher Hayes,Silver,152,9,12890.85,4,2,2,8,New Customers
+477,David Holmes,Silver,18,7,10269.77,2,3,3,8,At Risk
+175,Alexander King,Bronze,94,9,12553.52,4,2,2,8,New Customers
+41,Laura Pearson,Gold,170,10,16166.60,5,2,1,8,New Customers
+22,Dennis Marshall,Silver,11,8,6131.72,1,3,4,8,At Risk
+560,Tanya Hunter,Silver,32,8,8129.87,2,3,3,8,At Risk
+18,Michael Hicks,Gold,92,9,12090.09,4,2,2,8,New Customers
+340,Logan Scott,Bronze,103,10,13199.48,4,2,2,8,New Customers
+134,Tami Clark,Bronze,103,10,10711.69,4,2,2,8,New Customers
+83,Joseph Rios,Silver,34,9,7436.22,2,2,4,8,Lost
+221,Tracey Lewis,Platinum,3,7,9754.94,1,4,3,8,At Risk
+568,Jeremy Ellis,Silver,36,8,8043.66,2,3,3,8,At Risk
+445,Chris Kirk,Bronze,140,10,12026.33,4,2,2,8,New Customers
+34,Eric Thompson,Platinum,10,7,7184.73,1,3,4,8,At Risk
+85,Hannah Burns,Gold,194,13,11271.98,5,1,2,8,New Customers
+279,Robert Fleming,Silver,9,7,6600.15,1,3,4,8,At Risk
+162,Catherine Taylor,Bronze,27,6,10542.15,2,4,2,8,At Risk
+409,Joel Gregory,Bronze,17,8,8088.56,2,3,3,8,At Risk
+499,Mckenzie Guerrero,Bronze,110,9,11070.88,4,2,2,8,New Customers
+530,Christopher Smith,Bronze,64,9,7917.21,3,2,3,8,Potential Loyalists
+579,Dean Cruz,Bronze,40,7,11475.18,2,4,2,8,At Risk
+223,Robert Parrish,Gold,39,8,9526.26,2,3,3,8,At Risk
+2,Helen Peterson,Silver,43,10,9423.65,3,2,3,8,Potential Loyalists
+258,Jessica Jackson,Platinum,6,7,6244.84,1,3,4,8,At Risk
+519,Cynthia Wilkinson,Platinum,4,8,6559.64,1,3,4,8,At Risk
+555,Jocelyn Krueger,Silver,10,8,7107.59,1,3,4,8,At Risk
+178,Jonathan Ramsey,Silver,152,9,13885.90,4,2,2,8,New Customers
+599,Melissa Archer,Bronze,40,9,9696.21,3,2,3,8,Potential Loyalists
+492,Jerry Carey,Silver,10,7,9423.98,1,4,3,8,At Risk
+458,Patrick Reilly,Bronze,16,8,9147.77,2,3,3,8,At Risk
+360,Christopher Walton,Bronze,219,10,17013.39,5,2,1,8,New Customers
+452,Joshua Molina,Silver,8,6,9111.98,1,4,3,8,At Risk
+236,Monica Huffman,Silver,59,8,13406.60,3,3,2,8,Loyal Customers
+278,Maria Harrison,Platinum,208,9,16921.12,5,2,1,8,New Customers
+9,Jeffrey Jones,Bronze,1,8,6415.37,1,3,4,8,At Risk
+37,Daniel Martin,Bronze,20,7,8243.47,2,3,3,8,At Risk
+171,Stephen Lawrence,Silver,123,9,12239.88,4,2,2,8,New Customers
+148,Christian Vega,Bronze,70,8,10810.54,3,3,2,8,Loyal Customers
+14,Amanda Wagner,Silver,40,9,9481.40,3,2,3,8,Potential Loyalists
+457,Patricia Lopez,Gold,88,10,11471.62,4,2,2,8,New Customers
+49,Cory Jennings,Silver,48,7,15309.88,3,4,1,8,Loyal Customers
+538,Susan Gill,Silver,5,7,7231.01,1,3,4,8,At Risk
+582,Shane Santos,Bronze,71,12,7695.69,3,1,4,8,Potential Loyalists
+521,Heidi Baker,Silver,6,7,10054.97,1,4,3,8,At Risk
+323,James Turner,Bronze,44,11,9538.57,3,1,3,7,Potential Loyalists
+554,Joshua Wood,Bronze,45,9,12476.64,3,2,2,7,Potential Loyalists
+459,Jeremy Oliver,Bronze,31,6,17403.47,2,4,1,7,At Risk
+497,Amanda Lee,Silver,49,9,10420.69,3,2,2,7,Potential Loyalists
+209,Gwendolyn Vasquez,Silver,50,12,9508.93,3,1,3,7,Potential Loyalists
+187,April Moody,Platinum,51,10,10847.01,3,2,2,7,Potential Loyalists
+137,Christine Sanchez,Gold,51,9,10443.31,3,2,2,7,Potential Loyalists
+257,Alexis Rodriguez,Gold,29,9,8488.05,2,2,3,7,Lost
+191,Brittany Hall,Gold,57,8,15746.41,3,3,1,7,Loyal Customers
+287,Jessica Smith,Silver,27,7,13938.16,2,3,2,7,At Risk
+503,Jeffery Fields,Silver,60,9,13139.01,3,2,2,7,Potential Loyalists
+343,Stephanie Ali,Bronze,61,9,12655.77,3,2,2,7,Potential Loyalists
+149,Katherine Ayers,Gold,26,8,13854.81,2,3,2,7,At Risk
+482,Catherine Mendoza,Gold,63,10,12497.72,3,2,2,7,Potential Loyalists
+106,Eric Price,Bronze,64,10,11005.85,3,2,2,7,Potential Loyalists
+341,Douglas Orozco,Silver,64,9,11871.53,3,2,2,7,Potential Loyalists
+216,Shawn Parsons,Bronze,65,9,11448.20,3,2,2,7,Potential Loyalists
+163,Haley Castillo,Silver,65,9,10644.63,3,2,2,7,Potential Loyalists
+229,Phillip Moore,Silver,325,13,15172.79,5,1,1,7,New Customers
+276,Courtney Padilla,Bronze,25,8,10500.41,2,3,2,7,At Risk
+536,Tammy Welch,Silver,24,12,7529.62,2,1,4,7,Lost
+151,Jason Holloway,Platinum,70,10,13025.54,3,2,2,7,Potential Loyalists
+136,Rebecca Calderon,Bronze,73,8,14101.94,3,3,1,7,Loyal Customers
+494,Christina Mcknight,Gold,78,10,12108.45,3,2,2,7,Potential Loyalists
+410,Jasmine Patrick,Gold,23,7,15812.62,2,4,1,7,At Risk
+222,Lisa Davis,Silver,79,8,14488.81,3,3,1,7,Loyal Customers
+385,Cassandra Rogers,Gold,81,7,18554.06,3,3,1,7,Loyal Customers
+324,Alan Mccoy,Gold,86,10,16772.51,4,2,1,7,New Customers
+432,Wendy Lawson,Gold,3,9,6178.35,1,2,4,7,Lost
+117,Mary Burns,Bronze,20,13,6771.69,2,1,4,7,Lost
+450,Anna Cruz,Bronze,92,14,12284.30,4,1,2,7,New Customers
+440,Amy James,Silver,20,10,9783.40,2,2,3,7,Lost
+583,Douglas Ryan,Gold,97,10,15579.36,4,2,1,7,New Customers
+206,Abigail Cole,Bronze,19,8,10744.41,2,3,2,7,At Risk
+408,Julie Santana,Platinum,102,10,14465.55,4,2,1,7,New Customers
+314,Chloe Juarez,Silver,104,10,17670.72,4,2,1,7,New Customers
+552,Dustin Cook,Bronze,109,15,12613.88,4,1,2,7,New Customers
+308,Robert Randall,Silver,114,11,10980.93,4,1,2,7,New Customers
+549,Kimberly Lee,Bronze,115,11,11952.76,4,1,2,7,New Customers
+532,Hannah Sanchez,Silver,115,11,13954.06,4,1,2,7,New Customers
+235,Harold Garza,Gold,115,10,16612.64,4,2,1,7,New Customers
+438,Valerie Mcmillan,Bronze,16,8,11968.07,2,3,2,7,At Risk
+78,Robert Marshall,Silver,118,9,17129.11,4,2,1,7,New Customers
+591,Luke Klein,Silver,119,11,12214.81,4,1,2,7,New Customers
+329,Scott Perry,Bronze,119,9,17756.78,4,2,1,7,New Customers
+205,Sergio Miller,Bronze,14,7,8387.66,1,3,3,7,At Risk
+454,David Flores,Gold,125,11,13898.00,4,1,2,7,New Customers
+456,Diana Abbott,Bronze,13,8,8924.03,1,3,3,7,At Risk
+25,Anne Johnson,Bronze,2,8,10226.28,1,3,3,7,At Risk
+586,Michele Sosa,Gold,133,13,10590.70,4,1,2,7,New Customers
+375,Joann Todd,Gold,12,8,9516.09,1,3,3,7,At Risk
+248,Tony Jones,Silver,12,8,9574.86,1,3,3,7,At Risk
+589,Kelly Sims,Silver,147,11,11252.52,4,1,2,7,New Customers
+437,Monica Warren,Silver,158,11,14296.02,5,1,1,7,New Customers
+220,Rachel Pierce,Platinum,172,12,16423.34,5,1,1,7,New Customers
+597,Geoffrey Cantu,Silver,9,9,5732.92,1,2,4,7,Lost
+362,Cassandra Taylor,Platinum,7,7,10223.89,1,3,3,7,At Risk
+48,Paige Taylor,Bronze,201,14,17480.16,5,1,1,7,New Customers
+353,Devin Williams,Bronze,210,11,17821.04,5,1,1,7,New Customers
+383,George Brooks,Silver,217,12,20703.03,5,1,1,7,New Customers
+87,Denise Gilmore,Bronze,6,6,10744.87,1,4,2,7,At Risk
+565,Jeffrey Anderson,Silver,5,8,9055.52,1,3,3,7,At Risk
+509,Kari Norton,Gold,4,8,8130.64,1,3,3,7,At Risk
+237,Lindsey Franklin,Bronze,33,8,13100.07,2,3,2,7,At Risk
+285,Robert Peters,Platinum,33,9,10248.27,2,2,3,7,Lost
+529,David Hunter,Bronze,33,9,10161.96,2,2,3,7,Lost
+539,Jacob Johnson,Silver,288,14,14274.14,5,1,1,7,New Customers
+475,Angela Gonzalez,Bronze,32,6,14083.34,2,4,1,7,At Risk
+439,Barbara Smith,Silver,43,10,13396.85,3,2,2,7,Potential Loyalists
+110,Marie Jones,Bronze,32,10,9832.09,2,2,3,7,Lost
+374,Dean Thompson,Bronze,33,12,9258.90,2,1,3,6,Lost
+396,Bryan Stout,Silver,26,12,7996.70,2,1,3,6,Lost
+442,Mary Stone,Silver,5,12,6400.14,1,1,4,6,Lost
+479,Mary Aguirre,Gold,13,8,13369.93,1,3,2,6,At Risk
+321,Christopher Mcdowell,Bronze,0,9,9470.96,1,2,3,6,Lost
+161,Jonathan Nichols,Silver,3,9,8487.99,1,2,3,6,Lost
+116,Cynthia Steele,Bronze,88,12,20616.00,4,1,1,6,New Customers
+100,Martha Porter,Gold,51,9,17162.41,3,2,1,6,Potential Loyalists
+147,Gloria Mayer,Gold,30,8,14228.69,2,3,1,6,At Risk
+30,John Alvarez,Silver,2,9,11368.87,1,3,2,6,At Risk
+190,Zachary Sullivan,Platinum,123,12,15827.81,4,1,1,6,New Customers
+306,Jonathan Lawrence,Bronze,15,8,11004.03,1,3,2,6,At Risk
+274,Patricia Vargas,Silver,39,9,11784.90,2,2,2,6,Lost
+365,Margaret Morrison,Silver,103,14,20092.92,4,1,1,6,New Customers
+427,Maria Ellison,Bronze,9,10,10209.85,1,2,3,6,Lost
+255,Steven Miller,Bronze,146,11,20146.16,4,1,1,6,New Customers
+194,Mitchell Peters,Silver,147,12,16484.50,4,1,1,6,New Customers
+443,Jerry Mckinney,Gold,9,13,7780.73,1,1,4,6,Lost
+256,Austin Livingston,Gold,8,9,8277.75,1,2,3,6,Lost
+600,Kristen Cox,Bronze,2,10,8429.56,1,2,3,6,Lost
+491,Logan Lee,Silver,114,12,22146.64,4,1,1,6,New Customers
+594,Meghan Gonzalez,Silver,40,8,17213.85,2,3,1,6,At Risk
+413,Crystal Guzman,Silver,74,13,13737.59,3,1,2,6,Potential Loyalists
+424,Alison Frank,Silver,12,8,13231.12,1,3,2,6,At Risk
+335,April Foster,Bronze,40,14,10596.08,3,1,2,6,Potential Loyalists
+128,Cheryl Brown,Gold,3,8,13261.83,1,3,2,6,At Risk
+379,Eric Barber,Bronze,49,11,10961.01,3,1,2,6,Potential Loyalists
+434,Jose Hutchinson,Silver,40,9,11082.74,2,2,2,6,Lost
+68,Elizabeth Mills,Silver,96,12,16079.81,4,1,1,6,New Customers
+217,Donna Williams,Bronze,7,8,11959.45,1,3,2,6,At Risk
+507,Patrick Kaiser,Silver,107,14,19016.25,4,1,1,6,New Customers
+122,Nathan Mckee,Gold,130,11,14013.33,4,1,1,6,New Customers
+528,Kevin Davis,Platinum,45,13,13593.90,3,1,2,6,Potential Loyalists
+233,Hailey Delacruz,Bronze,6,11,7194.01,1,1,4,6,Lost
+441,Kimberly Arnold,Platinum,138,11,14773.35,4,1,1,6,New Customers
+245,Katherine Fowler,Gold,93,13,22616.26,4,1,1,6,New Customers
+551,Thomas Cohen,Bronze,64,12,13669.88,3,1,2,6,Potential Loyalists
+370,Donald Hoover,Platinum,3,9,8141.36,1,2,3,6,Lost
+516,Michael Lee,Gold,25,9,10581.08,2,2,2,6,Lost
+473,Nicholas Ruiz,Bronze,63,11,13763.79,3,1,2,6,Potential Loyalists
+412,Joshua Obrien,Bronze,63,12,13868.51,3,1,2,6,Potential Loyalists
+159,Erica Sims,Platinum,61,9,18281.84,3,2,1,6,Potential Loyalists
+131,Angela Smith,Silver,1,10,8207.24,1,2,3,6,Lost
+517,Shawn Thompson,Bronze,5,10,9095.06,1,2,3,6,Lost
+315,Michael Fletcher,Silver,45,11,13145.67,3,1,2,6,Potential Loyalists
+566,Sarah Johnson,Silver,27,9,10585.09,2,2,2,6,Lost
+512,Cody Weber,Silver,44,9,14622.97,3,2,1,6,Potential Loyalists
+407,Randall Evans,Platinum,110,12,18971.24,4,1,1,6,New Customers
+435,Michael Mcdonald,Silver,54,11,13890.57,3,1,2,6,Potential Loyalists
+495,Brianna Duffy,Bronze,29,10,13509.15,2,2,2,6,Lost
+307,Michael Burnett,Gold,59,16,18506.58,3,1,1,5,Potential Loyalists
+501,Tracy Mccoy,Silver,57,15,22195.74,3,1,1,5,Potential Loyalists
+282,Mark Thornton,Gold,12,8,14352.39,1,3,1,5,At Risk
+405,Michael Williams,Silver,8,9,13736.51,1,2,2,5,Lost
+42,Heather Santos,Bronze,44,15,19639.17,3,1,1,5,Potential Loyalists
+183,Michael Lambert,Bronze,32,11,13688.52,2,1,2,5,Lost
+345,Robin Anderson,Platinum,4,8,16020.96,1,3,1,5,At Risk
+373,Alexis Valdez,Bronze,31,10,14097.78,2,2,1,5,Lost
+524,Kevin Arellano,Silver,49,14,17418.91,3,1,1,5,Potential Loyalists
+33,Victoria Wilson,Bronze,5,10,10704.90,1,2,2,5,Lost
+109,Carrie Dominguez,Bronze,46,12,22055.70,3,1,1,5,Potential Loyalists
+328,Chelsea Garrison,Bronze,35,11,12264.49,2,1,2,5,Lost
+418,Lindsey Mullins,Bronze,8,9,10466.65,1,2,2,5,Lost
+264,Melissa Peterson,Silver,6,10,13633.81,1,2,2,5,Lost
+397,Angela Mcbride,Bronze,1,11,9253.71,1,1,3,5,Lost
+86,Maria Nelson,Bronze,52,11,16949.94,3,1,1,5,Potential Loyalists
+338,Elizabeth Ortiz,Bronze,23,11,13497.79,2,1,2,5,Lost
+192,Debra Boyd,Silver,42,14,21485.38,3,1,1,5,Potential Loyalists
+90,Sandra Barron,Silver,74,11,14902.92,3,1,1,5,Potential Loyalists
+158,Brian Hayes,Bronze,16,14,12738.44,2,1,2,5,Lost
+277,Gregory Hansen,Bronze,16,14,13315.85,2,1,2,5,Lost
+393,Michelle Brown,Silver,20,11,13554.03,2,1,2,5,Lost
+201,Alicia Henderson,Silver,39,10,15588.07,2,2,1,5,Lost
+423,Becky Moyer,Gold,13,11,8518.86,1,1,3,5,Lost
+126,Valerie Peck,Bronze,11,8,14392.71,1,3,1,5,At Risk
+195,Thomas Burke,Silver,20,10,19002.57,2,2,1,5,Lost
+401,Kirsten Martinez,Silver,30,9,18079.88,2,2,1,5,Lost
+200,David Miller,Bronze,24,10,20455.39,2,2,1,5,Lost
+403,Kevin Hodge,Gold,18,9,19438.36,2,2,1,5,Lost
+203,Thomas Smith,Silver,62,14,15203.75,3,1,1,5,Potential Loyalists
+508,Gary Hancock,Bronze,67,11,23177.94,3,1,1,5,Potential Loyalists
+506,Marie Villarreal,Silver,24,10,17005.79,2,2,1,5,Lost
+390,Lance Lawrence,Gold,6,9,13943.32,1,2,2,5,Lost
+546,Jamie Hernandez,Bronze,2,10,13183.74,1,2,2,5,Lost
+145,Brandon Armstrong,Silver,47,14,20999.03,3,1,1,5,Potential Loyalists
+387,Rebecca Navarro,Bronze,22,11,13592.60,2,1,2,5,Lost
+317,Zoe Meadows,Silver,7,9,13717.16,1,2,2,5,Lost
+342,Anthony Schultz,Silver,32,10,22272.03,2,2,1,5,Lost
+127,Rodney Morales,Silver,40,13,15149.81,3,1,1,5,Potential Loyalists
+16,Mary Aguilar,Bronze,22,11,11013.55,2,1,2,5,Lost
+515,Tracy Mccormick,Bronze,8,11,10224.60,1,1,3,5,Lost
+176,David Silva,Gold,14,11,12954.95,1,1,2,4,Lost
+82,Stephen Obrien,Silver,4,10,16668.58,1,2,1,4,Lost
+333,Brian Watson,Silver,12,14,13562.23,1,1,2,4,Lost
+400,Anthony Munoz,Silver,18,14,18281.04,2,1,1,4,Lost
+363,Kayla Wolfe,Silver,11,10,17433.55,1,2,1,4,Lost
+24,Adam Bell,Bronze,19,13,17509.58,2,1,1,4,Lost
+299,Brandy Hubbard,Bronze,3,9,14079.91,1,2,1,4,Lost
+570,Rachel Stanton,Gold,20,12,21054.25,2,1,1,4,Lost
+125,Justin Pugh,Bronze,10,11,12767.14,1,1,2,4,Lost
+436,Eric Harrison,Gold,1,10,23152.48,1,2,1,4,Lost
+94,Jennifer Coleman,Gold,9,11,10525.99,1,1,2,4,Lost
+563,Christy Johnson,Bronze,2,10,16005.04,1,2,1,4,Lost
+369,Steven Jones,Silver,1,11,13953.84,1,1,2,4,Lost
+547,Monique Waller,Silver,2,13,13140.59,1,1,2,4,Lost
+121,Joseph Clayton,Gold,3,10,14204.57,1,2,1,4,Lost
+301,Tyler Boone,Bronze,23,12,21329.15,2,1,1,4,Lost
+571,Kristie Lucas,Bronze,1,9,14329.88,1,2,1,4,Lost
+27,Tamara Higgins,Bronze,31,13,16836.87,2,1,1,4,Lost
+95,Bradley Gonzales,Silver,7,14,10568.17,1,1,2,4,Lost
+102,Alice Allen,Platinum,31,11,14746.87,2,1,1,4,Lost
+239,Megan Brown,Bronze,7,11,12105.81,1,1,2,4,Lost
+421,Aaron Walker,Bronze,24,12,14144.48,2,1,1,4,Lost
+455,Donna Moss,Gold,25,19,24909.02,2,1,1,4,Lost
+361,Scott Baker,Bronze,6,10,15178.17,1,2,1,4,Lost
+186,Wayne Bates,Bronze,25,15,18964.40,2,1,1,4,Lost
+592,Eric George,Gold,28,12,21569.17,2,1,1,4,Lost
+244,James Mclean,Silver,35,12,14033.28,2,1,1,4,Lost
+417,Stacey Henson,Gold,36,16,16873.18,2,1,1,4,Lost
+564,Tonya Chase,Silver,37,13,16398.38,2,1,1,4,Lost
+188,Nicholas Solomon,Gold,4,11,10769.37,1,1,2,4,Lost
+114,Russell Smith,Bronze,14,9,14801.74,1,2,1,4,Lost
+378,Justin West,Gold,16,14,14546.70,2,1,1,4,Lost
+88,Shawn Davidson,Silver,13,10,14949.55,1,2,1,4,Lost
+386,Molly Robertson,Silver,17,12,20291.66,2,1,1,4,Lost
+31,Jennifer Stewart,Bronze,17,18,24860.67,2,1,1,4,Lost
+185,Anthony Perkins,Bronze,18,13,16151.56,2,1,1,4,Lost
+541,Mary Wiggins,Bronze,1,13,18179.53,1,1,1,3,Lost
+57,Ryan Anderson,Silver,5,13,28097.72,1,1,1,3,Lost
+518,Joan Cook,Silver,2,12,13966.85,1,1,1,3,Lost
+381,Erica Terry,Bronze,3,12,16083.37,1,1,1,3,Lost
+225,Wendy Warren,Gold,7,12,17718.50,1,1,1,3,Lost
+283,James Fox,Silver,7,11,15897.86,1,1,1,3,Lost
+587,Lindsay Collins,Bronze,8,11,16318.85,1,1,1,3,Lost
+249,Terri Reyes,Gold,8,11,21293.97,1,1,1,3,Lost
+344,Christopher Hale,Silver,2,12,17654.04,1,1,1,3,Lost
+265,James Cortez,Silver,9,12,29275.31,1,1,1,3,Lost
+63,Matthew Miranda,Gold,14,14,14834.60,1,1,1,3,Lost
+130,Angela Sloan,Gold,10,15,14107.42,1,1,1,3,Lost
+198,John Ramos,Bronze,10,12,19879.83,1,1,1,3,Lost
+275,Heather Russell,Platinum,2,11,17194.58,1,1,1,3,Lost
+164,Melissa Ward,Silver,5,14,23134.16,1,1,1,3,Lost

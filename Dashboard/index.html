@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce Sales Analytics Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <style>
+    /* CSS custom properties — toggled by data-theme="dark" on <html> */
+    :root {
+      --bg:            #f0f2f5;
+      --panel:         #ffffff;
+      --topbar:        #ffffff;
+      --text:          #1a2744;
+      --muted:         #718096;
+      --border:        #e2e8f0;
+      --sidebar-bg:    #1a2744;
+      --sidebar-link:  #a0aec0;
+      --sidebar-active:#2e3f6e;
+      --badge-bg:      #ebf8ff;
+      --badge-text:    #2b6cb0;
+      --badge-border:  #bee3f8;
+      --table-head:    #edf2f7;
+      --table-border:  #f0f2f5;
+      --filter-bg:     #edf2f7;
+      --filter-active: #1a2744;
+      --filter-text:   #4a5568;
+      --filter-atext:  #ffffff;
+      --shadow:        rgba(0,0,0,.07);
+    }
+    html[data-theme="dark"] {
+      --bg:            #0d1117;
+      --panel:         #161b22;
+      --topbar:        #161b22;
+      --text:          #e6edf3;
+      --muted:         #8b949e;
+      --border:        #30363d;
+      --sidebar-bg:    #010409;
+      --sidebar-link:  #8b949e;
+      --sidebar-active:#21262d;
+      --badge-bg:      #1c2b3a;
+      --badge-text:    #79c0ff;
+      --badge-border:  #1f4a6e;
+      --table-head:    #21262d;
+      --table-border:  #21262d;
+      --filter-bg:     #21262d;
+      --filter-active: #58a6ff;
+      --filter-text:   #8b949e;
+      --filter-atext:  #0d1117;
+      --shadow:        rgba(0,0,0,.35);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background .3s, color .3s;
+    }
+
+    /* ── Sidebar ── */
+    #sidebar {
+      position: fixed; top: 0; left: 0;
+      width: 220px; height: 100%;
+      background: var(--sidebar-bg);
+      display: flex; flex-direction: column;
+      padding: 24px 0; z-index: 100;
+      transition: background .3s;
+    }
+    #sidebar .logo {
+      color: #fff; font-size: 15px; font-weight: 700;
+      padding: 0 20px 24px;
+      border-bottom: 1px solid #2e3f6e; letter-spacing: .5px;
+    }
+    #sidebar .logo span { color: #4fc3f7; }
+    #sidebar nav { margin-top: 16px; }
+    #sidebar nav a {
+      display: flex; align-items: center; gap: 10px;
+      color: var(--sidebar-link); text-decoration: none;
+      font-size: 13.5px; padding: 11px 20px; transition: all .2s;
+    }
+    #sidebar nav a:hover, #sidebar nav a.active {
+      background: var(--sidebar-active); color: #fff;
+      border-left: 3px solid #4fc3f7;
+    }
+
+    /* ── Main ── */
+    #main { margin-left: 220px; padding: 0 28px 40px; }
+
+    /* ── Topbar ── */
+    #topbar {
+      background: var(--topbar); border-bottom: 2px solid var(--border);
+      padding: 14px 28px; margin: 0 -28px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 50;
+      transition: background .3s, border-color .3s;
+    }
+    #topbar h1 { font-size: 18px; font-weight: 700; color: var(--text); }
+    #topbar .subtitle { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .topbar-right { display: flex; align-items: center; gap: 12px; }
+    .badge {
+      background: var(--badge-bg); color: var(--badge-text);
+      border: 1px solid var(--badge-border);
+      border-radius: 12px; padding: 4px 12px;
+      font-size: 12px; font-weight: 600;
+    }
+    #darkToggle {
+      background: var(--filter-bg); border: 1px solid var(--border);
+      color: var(--text); border-radius: 8px;
+      padding: 6px 14px; font-size: 13px; cursor: pointer;
+      font-weight: 600; transition: all .2s;
+    }
+    #darkToggle:hover { opacity: .8; }
+
+    /* ── Filter bar ── */
+    #filterBar {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 0; margin-bottom: 20px;
+      border-bottom: 1px solid var(--border); flex-wrap: wrap;
+    }
+    .filter-label {
+      font-size: 12px; font-weight: 700; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .5px; margin-right: 2px;
+    }
+    .filter-btn {
+      background: var(--filter-bg); color: var(--filter-text);
+      border: 1px solid var(--border); border-radius: 20px;
+      padding: 5px 16px; font-size: 12px; font-weight: 600;
+      cursor: pointer; transition: all .2s;
+    }
+    .filter-btn:hover { border-color: #4299e1; color: #4299e1; }
+    .filter-btn.active {
+      background: var(--filter-active); color: var(--filter-atext);
+      border-color: var(--filter-active);
+    }
+    .divider { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
+    #activeTag {
+      margin-left: auto; font-size: 11px; color: var(--muted);
+      background: var(--filter-bg); border-radius: 12px;
+      padding: 4px 12px; font-weight: 600;
+    }
+    .info-tip { font-size: 11px; color: var(--muted); font-style: italic; }
+
+    /* ── KPI cards ── */
+    .kpi-row {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 16px; margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: var(--panel); border-radius: 10px;
+      padding: 20px 22px; border-top: 4px solid;
+      box-shadow: 0 1px 4px var(--shadow);
+      transition: background .3s, box-shadow .3s;
+    }
+    .kpi-card .label {
+      font-size: 11px; text-transform: uppercase;
+      letter-spacing: .8px; color: var(--muted); font-weight: 600;
+    }
+    .kpi-card .value {
+      font-size: 28px; font-weight: 800; color: var(--text);
+      margin: 6px 0 2px;
+    }
+    .kpi-card .sub { font-size: 12px; color: #68d391; font-weight: 600; }
+    .kpi-card:nth-child(1) { border-color: #4299e1; }
+    .kpi-card:nth-child(2) { border-color: #48bb78; }
+    .kpi-card:nth-child(3) { border-color: #ed8936; }
+    .kpi-card:nth-child(4) { border-color: #9f7aea; }
+
+    /* ── Grids ── */
+    .grid-2  { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .grid-eq { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+
+    /* ── Panels ── */
+    .panel {
+      background: var(--panel); border-radius: 10px;
+      padding: 20px 22px; box-shadow: 0 1px 4px var(--shadow);
+      transition: background .3s, box-shadow .3s;
+    }
+    .panel-title {
+      font-size: 13px; font-weight: 700; color: var(--text);
+      text-transform: uppercase; letter-spacing: .6px; margin-bottom: 4px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .panel-sub { font-size: 11px; color: var(--muted); margin-bottom: 16px; }
+    .dyn-badge {
+      font-size: 10px; font-weight: 600;
+      background: var(--badge-bg); color: var(--badge-text);
+      border: 1px solid var(--badge-border);
+      border-radius: 8px; padding: 2px 7px;
+    }
+
+    /* ── Table ── */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead tr { background: var(--table-head); }
+    thead th {
+      text-align: left; padding: 9px 10px; font-size: 11px;
+      text-transform: uppercase; letter-spacing: .5px;
+      color: var(--muted); font-weight: 700;
+    }
+    tbody tr { border-bottom: 1px solid var(--table-border); }
+    tbody tr:hover { background: var(--filter-bg); }
+    tbody td { padding: 9px 10px; color: var(--text); }
+    .rank { font-weight: 700; color: #4299e1; }
+    .bar-cell { display: flex; align-items: center; gap: 8px; }
+    .mini-bar { height: 6px; border-radius: 3px; background: #4299e1; flex-shrink: 0; }
+
+    footer {
+      margin-top: 32px; text-align: center;
+      font-size: 11px; color: var(--muted); padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="logo">📊 <span>Analytics</span> Portal</div>
+  <nav>
+    <a href="#" class="active">🏠&nbsp; Overview</a>
+    <a href="#revenue">💰&nbsp; Revenue</a>
+    <a href="#products">📦&nbsp; Products</a>
+    <a href="#customers">👥&nbsp; Customers</a>
+    <a href="#regional">🗺️&nbsp; Regional</a>
+    <a href="#quality">✅&nbsp; Data Quality</a>
+  </nav>
+</nav>
+
+<!-- MAIN -->
+<div id="main">
+
+  <!-- TOPBAR -->
+  <div id="topbar">
+    <div>
+      <h1>E-Commerce Sales Analytics Dashboard</h1>
+      <div class="subtitle">Fiscal Year 2022–2024 &nbsp;|&nbsp; All Regions &nbsp;|&nbsp; All Segments</div>
+    </div>
+    <div class="topbar-right">
+      <div class="badge">Last updated: Dec 2024</div>
+      <button id="darkToggle" onclick="toggleDark()">🌙 Dark Mode</button>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div id="filterBar">
+    <span class="filter-label">📅 Year:</span>
+    <button class="filter-btn active" onclick="applyFilter('all',this)">All Years</button>
+    <button class="filter-btn" onclick="applyFilter('2022',this)">2022</button>
+    <button class="filter-btn" onclick="applyFilter('2023',this)">2023</button>
+    <button class="filter-btn" onclick="applyFilter('2024',this)">2024</button>
+    <div class="divider"></div>
+    <span class="info-tip">Revenue, MoM &amp; Customer charts update with filter</span>
+    <span id="activeTag">Showing: All Years (2022 – 2024)</span>
+  </div>
+
+  <!-- KPI CARDS -->
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="label">Gross Revenue</div>
+      <div class="value" id="kpi-revenue">$5.80M</div>
+      <div class="sub"  id="kpi-rev-sub">▲ 3.7× growth 2022 → 2024</div>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Total Orders</div>
+      <div class="value" id="kpi-orders">4,834</div>
+      <div class="sub"  id="kpi-ord-sub">▲ Avg $1,199 / order</div>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Unique Customers</div>
+      <div class="value" id="kpi-customers">600</div>
+      <div class="sub"  id="kpi-cust-sub">▲ 84% retention rate</div>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Overall Margin</div>
+      <div class="value" id="kpi-margin">48.2%</div>
+      <div class="sub"  id="kpi-mrg-sub">▲ $2.79M gross profit</div>
+    </div>
+  </div>
+
+  <!-- ROW 1: Revenue trend + Category donut -->
+  <div class="grid-2" id="revenue">
+    <div class="panel">
+      <div class="panel-title">
+        Quarterly Revenue &amp; Profit
+        <span class="dyn-badge" id="badge-rev">All Years</span>
+      </div>
+      <div class="panel-sub">Click legend items to show / hide a series</div>
+      <canvas id="revenueChart" height="200"></canvas>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Revenue by Category</div>
+      <div class="panel-sub">Share of $5.80M total revenue</div>
+      <canvas id="categoryChart" height="200"></canvas>
+    </div>
+  </div>
+
+  <!-- ROW 2: MoM growth -->
+  <div class="panel" style="margin-bottom:20px">
+    <div class="panel-title">
+      Month-over-Month Revenue Growth (%)
+      <span class="dyn-badge" id="badge-mom">All Years</span>
+    </div>
+    <div class="panel-sub">Green = growth &nbsp;·&nbsp; Red = decline</div>
+    <canvas id="momChart" height="120"></canvas>
+  </div>
+
+  <!-- ROW 3: Regional + Segment -->
+  <div class="grid-eq" id="regional">
+    <div class="panel">
+      <div class="panel-title">Regional Performance</div>
+      <div class="panel-sub">Revenue vs refunds by region</div>
+      <canvas id="regionalChart" height="220"></canvas>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Revenue by Customer Segment</div>
+      <div class="panel-sub">Dual-axis: revenue (bars) + orders (line)</div>
+      <canvas id="segmentChart" height="220"></canvas>
+    </div>
+  </div>
+
+  <!-- ROW 4: Products + New vs Returning -->
+  <div class="grid-eq" id="products">
+    <div class="panel">
+      <div class="panel-title">Top 10 Products by Units Sold</div>
+      <div class="panel-sub">Unit volume across all orders</div>
+      <canvas id="productsChart" height="280"></canvas>
+    </div>
+    <div class="panel" id="customers">
+      <div class="panel-title">
+        New vs Returning Customers
+        <span class="dyn-badge" id="badge-nvr">All Years</span>
+      </div>
+      <div class="panel-sub">Monthly stacked order volume</div>
+      <canvas id="nvrChart" height="280"></canvas>
+    </div>
+  </div>
+
+  <!-- ROW 5: Sales rep table -->
+  <div class="panel" style="margin-bottom:20px">
+    <div class="panel-title">Sales Rep Performance</div>
+    <div class="panel-sub">Ranked by total revenue</div>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th><th>Name</th><th>Role</th><th>Region</th>
+          <th>Orders</th><th>Customers</th><th>Revenue</th><th>Revenue Bar</th>
+        </tr>
+      </thead>
+      <tbody id="repTable"></tbody>
+    </table>
+  </div>
+
+  <!-- ROW 6: Margin -->
+  <div class="panel" style="margin-bottom:20px" id="quality">
+    <div class="panel-title">Margin % by Category</div>
+    <div class="panel-sub">Profitability comparison — Food &amp; Bev leads at 62.7%</div>
+    <canvas id="marginChart" height="100"></canvas>
+  </div>
+
+  <footer>Built with Chart.js · E-Commerce Analytics SQL Portfolio · 2022–2024</footer>
+</div>
+
+<script>
+/* ═══════════════════════════════════════
+   DATA keyed by year filter
+═══════════════════════════════════════ */
+const DATA = {
+  kpis: {
+    all:  { revenue:'$5.80M', orders:'4,834', customers:'600',  margin:'48.2%',
+            revSub:'▲ 3.7× growth 2022 → 2024',  ordSub:'▲ Avg $1,199 / order',
+            custSub:'▲ 84% retention rate',        mrgSub:'▲ $2.79M gross profit' },
+    2022: { revenue:'$998K',  orders:'843',   customers:'178',  margin:'47.6%',
+            revSub:'Base year · $475K profit',     ordSub:'Avg $1,185 / order',
+            custSub:'60 new customers in Jan',     mrgSub:'$475K gross profit' },
+    2023: { revenue:'$1.75M', orders:'1,409', customers:'280',  margin:'47.9%',
+            revSub:'▲ 75.7% YoY vs 2022',         ordSub:'Avg $1,245 / order',
+            custSub:'Retention dominant from Q1',  mrgSub:'$840K gross profit' },
+    2024: { revenue:'$3.04M', orders:'2,582', customers:'378',  margin:'48.5%',
+            revSub:'▲ 73.5% YoY vs 2023',         ordSub:'Avg $1,178 / order',
+            custSub:'Mature base · Q4 surge',      mrgSub:'$1.48M gross profit' }
+  },
+  quarterly: {
+    all: {
+      labels:  ['Q1\'22','Q2\'22','Q3\'22','Q4\'22','Q1\'23','Q2\'23','Q3\'23','Q4\'23','Q1\'24','Q2\'24','Q3\'24','Q4\'24'],
+      revenue: [182007,267388,267803,281303,424020,400844,430488,498733,520002,599732,818922,1105517],
+      profit:  [88490,125079,125992,135785,198995,195709,208945,236381,254584,290236,397761,534130]
+    },
+    2022: { labels:['Q1 2022','Q2 2022','Q3 2022','Q4 2022'], revenue:[182007,267388,267803,281303], profit:[88490,125079,125992,135785] },
+    2023: { labels:['Q1 2023','Q2 2023','Q3 2023','Q4 2023'], revenue:[424020,400844,430488,498733], profit:[198995,195709,208945,236381] },
+    2024: { labels:['Q1 2024','Q2 2024','Q3 2024','Q4 2024'], revenue:[520002,599732,818922,1105517], profit:[254584,290236,397761,534130] }
+  },
+  mom: {
+    all: {
+      labels: ['Feb\'22','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec',
+               'Jan\'23','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec',
+               'Jan\'24','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      values: [-7.01,17.37,45.69,-32.42,65.09,-28.05,10.25,25.19,-31.72,57.15,-16.62,
+               20.01,18.77,29.09,-32.43,26.01,-9.90,-9.84,31.01,-4.41,-4.55,-3.99,55.48,
+               -29.18,23.36,-5.01,8.92,1.95,3.74,46.55,-17.41,7.14,11.57,35.50,-0.25]
+    },
+    2022: { labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            values:[null,-7.01,17.37,45.69,-32.42,65.09,-28.05,10.25,25.19,-31.72,57.15,-16.62] },
+    2023: { labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            values:[20.01,18.77,29.09,-32.43,26.01,-9.90,-9.84,31.01,-4.41,-4.55,-3.99,55.48] },
+    2024: { labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            values:[-29.18,23.36,-5.01,8.92,1.95,3.74,46.55,-17.41,7.14,11.57,35.50,-0.25] }
+  },
+  nvr: {
+    all: {
+      labels: ['Jan\'22','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec',
+               'Jan\'23','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec',
+               'Jan\'24','Feb','Mar','Apr','May'],
+      newC: [60,42,24,39,28,21,21,17,16,17,15,11,12,12,11,15,19,9,15,13,12,13,16,15,9,8,11,9,12],
+      retC: [6,19,22,35,44,47,50,48,57,70,73,61,70,85,101,85,96,100,108,107,111,131,112,141,132,152,137,142,164]
+    },
+    2022: { labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            newC:[60,42,24,39,28,21,21,17,16,17,15,11], retC:[6,19,22,35,44,47,50,48,57,70,73,61] },
+    2023: { labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            newC:[12,12,11,15,19,9,15,13,12,13,16,15],  retC:[70,85,101,85,96,100,108,107,111,131,112,141] },
+    2024: { labels:['Jan','Feb','Mar','Apr','May'],
+            newC:[9,8,11,9,12],                          retC:[132,152,137,142,164] }
+  }
+};
+
+/* ═══════════════════════════════════════
+   THEME HELPERS
+═══════════════════════════════════════ */
+const isDark    = () => document.documentElement.getAttribute('data-theme') === 'dark';
+const gridColor = () => isDark() ? '#21262d' : '#f0f2f5';
+const tickColor = () => isDark() ? '#8b949e' : '#718096';
+const legColor  = () => isDark() ? '#e6edf3' : '#2d3748';
+
+/* ═══════════════════════════════════════
+   CHART STORE + SCALE HELPERS
+═══════════════════════════════════════ */
+const charts = {};
+
+function yS(cbk) {
+  const o = { grid: { color: gridColor() }, ticks: { color: tickColor() } };
+  if (cbk) o.ticks.callback = cbk;
+  return o;
+}
+function xS(opts) { return { grid: { display: false }, ticks: { color: tickColor(), ...opts } }; }
+function leg(pos) { return { position: pos||'top', labels: { font: { size:11 }, color: legColor() } }; }
+
+/* ── Quarterly Revenue ── */
+(function () {
+  const d = DATA.quarterly.all;
+  charts.revenue = new Chart(document.getElementById('revenueChart'), {
+    type: 'bar',
+    data: {
+      labels: d.labels,
+      datasets: [
+        { label:'Revenue',       data:d.revenue, backgroundColor:'rgba(66,153,225,.85)', borderRadius:4, order:2 },
+        { label:'Gross Profit',  data:d.profit,  backgroundColor:'rgba(72,187,120,.85)', borderRadius:4, order:2 },
+        { label:'Revenue Trend', data:d.revenue, type:'line', borderColor:'#2b6cb0', backgroundColor:'transparent', borderWidth:2.5, pointRadius:3, tension:.35, order:1 }
+      ]
+    },
+    options: {
+      responsive:true, animation:{ duration:600 },
+      plugins:{ legend:leg(), tooltip:{ callbacks:{ label:c=>' $'+c.parsed.y.toLocaleString() } } },
+      scales:{ y:yS(v=>'$'+(v/1000).toFixed(0)+'K'), x:xS({ font:{size:10} }) }
+    }
+  });
+})();
+
+/* ── Category Donut ── */
+(function () {
+  charts.category = new Chart(document.getElementById('categoryChart'), {
+    type:'doughnut',
+    data:{
+      labels:['Electronics','Furniture','Clothing','Office Supplies','Food & Bev'],
+      datasets:[{ data:[3188754,1920159,368318,239762,79768],
+        backgroundColor:['#4299e1','#9f7aea','#ed8936','#38b2ac','#48bb78'],
+        borderWidth:2, borderColor:'transparent', hoverOffset:8 }]
+    },
+    options:{
+      cutout:'62%',
+      plugins:{
+        legend:leg('right'),
+        tooltip:{ callbacks:{ label:c=>' $'+(c.parsed/1000).toFixed(0)+'K  ('+((c.parsed/5796764)*100).toFixed(1)+'%)' } }
+      }
+    }
+  });
+})();
+
+/* ── MoM Growth ── */
+(function () {
+  const d = DATA.mom.all;
+  const mkColors = vals => vals.map(v => v==null?'transparent':v>=0?'rgba(72,187,120,.85)':'rgba(252,129,129,.85)');
+  charts.mom = new Chart(document.getElementById('momChart'), {
+    type:'bar',
+    data:{ labels:d.labels, datasets:[{ label:'MoM %', data:d.values, backgroundColor:mkColors(d.values), borderRadius:3 }] },
+    options:{
+      responsive:true, animation:{ duration:600 },
+      plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:c=>c.parsed.y!=null?' '+c.parsed.y.toFixed(2)+'%':' No prior month' } } },
+      scales:{ y:yS(v=>v+'%'), x:xS({ font:{size:9}, maxRotation:45 }) }
+    }
+  });
+  charts.mom._mkColors = mkColors;
+})();
+
+/* ── Regional ── */
+(function () {
+  charts.regional = new Chart(document.getElementById('regionalChart'), {
+    type:'bar',
+    data:{
+      labels:['Southwest','Northeast','West','Midwest','Southeast'],
+      datasets:[
+        { label:'Revenue', data:[1200034,1190895,1188657,1151592,1137964], backgroundColor:'#4299e1', borderRadius:4 },
+        { label:'Refunds', data:[127814,124272,102039,94711,150335],       backgroundColor:'#fc8181', borderRadius:4 }
+      ]
+    },
+    options:{
+      indexAxis:'y', responsive:true,
+      plugins:{ legend:leg(), tooltip:{ callbacks:{ label:c=>' $'+c.parsed.x.toLocaleString() } } },
+      scales:{ x:yS(v=>'$'+(v/1000).toFixed(0)+'K'), y:{ grid:{display:false}, ticks:{ color:tickColor() } } }
+    }
+  });
+})();
+
+/* ── Customer Segment ── */
+(function () {
+  charts.segment = new Chart(document.getElementById('segmentChart'), {
+    type:'bar',
+    data:{
+      labels:['Silver','Bronze','Gold','Platinum'],
+      datasets:[
+        { label:'Revenue ($)', data:[2037196,2004390,1177713,577464], backgroundColor:['#4299e1','#48bb78','#ed8936','#9f7aea'], borderRadius:5, yAxisID:'y' },
+        { label:'Orders', data:[1691,1690,964,489], type:'line', borderColor:'#e53e3e', backgroundColor:'transparent', borderWidth:2, pointRadius:5, pointBackgroundColor:'#e53e3e', yAxisID:'y2' }
+      ]
+    },
+    options:{
+      responsive:true,
+      plugins:{ legend:leg(), tooltip:{ callbacks:{ label:c=>c.dataset.label==='Revenue ($)'?' $'+c.parsed.y.toLocaleString():' '+c.parsed.y+' orders' } } },
+      scales:{
+        y:  { position:'left',  ...yS(v=>'$'+(v/1000).toFixed(0)+'K') },
+        y2: { position:'right', grid:{display:false}, ticks:{ color:tickColor() } }
+      }
+    }
+  });
+})();
+
+/* ── Top Products ── */
+(function () {
+  charts.products = new Chart(document.getElementById('productsChart'), {
+    type:'bar',
+    data:{
+      labels:['USB-C Hub 7-port','Desk Organizer Pro','Wireless Mouse X300','Standing Desk Electric','Mechanical Keyboard','Stapler Heavy Duty','Bookshelf 5-Tier','4K Monitor 27-inch','Green Tea 50ct','Ergonomic Chair'],
+      datasets:[{ label:'Units Sold', data:[1556,1507,1494,1494,1491,1490,1490,1488,1487,1487],
+        backgroundColor:['#4299e1','#38b2ac','#4299e1','#9f7aea','#4299e1','#38b2ac','#9f7aea','#4299e1','#48bb78','#9f7aea'], borderRadius:4 }]
+    },
+    options:{
+      indexAxis:'y', responsive:true,
+      plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:c=>' '+c.parsed.x.toLocaleString()+' units' } } },
+      scales:{ x:yS(), y:{ grid:{display:false}, ticks:{ color:tickColor(), font:{size:10} } } }
+    }
+  });
+})();
+
+/* ── New vs Returning ── */
+(function () {
+  const d = DATA.nvr.all;
+  charts.nvr = new Chart(document.getElementById('nvrChart'), {
+    type:'bar',
+    data:{
+      labels:d.labels,
+      datasets:[
+        { label:'Returning', data:d.retC, backgroundColor:'rgba(66,153,225,.8)',  borderRadius:3, stack:'s' },
+        { label:'New',       data:d.newC, backgroundColor:'rgba(72,187,120,.85)', borderRadius:3, stack:'s' }
+      ]
+    },
+    options:{
+      responsive:true, animation:{ duration:600 },
+      plugins:{ legend:leg() },
+      scales:{ y:{ stacked:true, ...yS() }, x:{ stacked:true, grid:{display:false}, ticks:{ color:tickColor(), font:{size:9}, maxRotation:45 } } }
+    }
+  });
+})();
+
+/* ── Margin ── */
+(function () {
+  const m = [62.70,61.30,57.11,51.89,43.37];
+  charts.margin = new Chart(document.getElementById('marginChart'), {
+    type:'bar',
+    data:{
+      labels:['Food & Bev','Clothing','Office Supplies','Furniture','Electronics'],
+      datasets:[{ label:'Margin %', data:m, backgroundColor:m.map(v=>v>=60?'#48bb78':v>=50?'#38b2ac':'#ed8936'), borderRadius:5 }]
+    },
+    options:{
+      responsive:true,
+      plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:c=>' '+c.parsed.y.toFixed(2)+'%' } } },
+      scales:{ y:{ min:35, max:70, ...yS(v=>v+'%') }, x:xS() }
+    }
+  });
+})();
+
+/* ── Sales rep table ── */
+(function () {
+  const reps = [
+    { rank:1, name:'David Kim',     role:'Sales Rep',        region:'Southwest', orders:715, customers:406, revenue:918846 },
+    { rank:2, name:'Alice Nguyen',  role:'Senior Sales Rep', region:'Northeast', orders:713, customers:419, revenue:861950 },
+    { rank:3, name:'Brian Patel',   role:'Sales Rep',        region:'Southeast', orders:675, customers:396, revenue:856887 },
+    { rank:4, name:'Emily Johnson', role:'Sales Rep',        region:'West',      orders:692, customers:405, revenue:807682 },
+    { rank:5, name:'Irene Davis',   role:'Sales Rep',        region:'Southwest', orders:670, customers:406, revenue:787399 },
+    { rank:6, name:'Carmen Lopez',  role:'Sales Manager',    region:'Midwest',   orders:677, customers:404, revenue:783166 },
+    { rank:7, name:'Henry Zhang',   role:'Senior Sales Rep', region:'Midwest',   orders:692, customers:410, revenue:780830 }
+  ];
+  const maxR = Math.max(...reps.map(r=>r.revenue));
+  document.getElementById('repTable').innerHTML = reps.map(r=>`
+    <tr>
+      <td class="rank">#${r.rank}</td>
+      <td><strong>${r.name}</strong></td><td>${r.role}</td><td>${r.region}</td>
+      <td>${r.orders.toLocaleString()}</td><td>${r.customers.toLocaleString()}</td>
+      <td>$${(r.revenue/1000).toFixed(0)}K</td>
+      <td><div class="bar-cell">
+        <div class="mini-bar" style="width:${Math.round(r.revenue/maxR*140)}px"></div>
+        <span style="font-size:11px;color:var(--muted)">$${(r.revenue/1000).toFixed(0)}K</span>
+      </div></td>
+    </tr>`).join('');
+})();
+
+/* ═══════════════════════════════════════
+   YEAR FILTER — updates KPIs + 3 charts
+═══════════════════════════════════════ */
+function applyFilter(year, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const label = year === 'all' ? 'All Years' : year;
+  document.getElementById('activeTag').textContent =
+    year === 'all' ? 'Showing: All Years (2022 – 2024)' : 'Showing: ' + year;
+  ['badge-rev','badge-mom','badge-nvr'].forEach(id =>
+    document.getElementById(id).textContent = label);
+
+  /* KPI cards — fade out → update value → fade in */
+  const k = DATA.kpis[year];
+  [['kpi-revenue',k.revenue,'kpi-rev-sub',k.revSub],
+   ['kpi-orders', k.orders, 'kpi-ord-sub',k.ordSub],
+   ['kpi-customers',k.customers,'kpi-cust-sub',k.custSub],
+   ['kpi-margin',k.margin,'kpi-mrg-sub',k.mrgSub]
+  ].forEach(([vid,val,sid,sub]) => {
+    const el = document.getElementById(vid);
+    el.style.cssText = 'opacity:0;transform:translateY(-8px);transition:none';
+    setTimeout(() => {
+      el.textContent = val;
+      el.style.cssText = 'opacity:1;transform:translateY(0);transition:opacity .4s,transform .4s';
+    }, 60);
+    document.getElementById(sid).textContent = sub;
+  });
+
+  /* Revenue chart */
+  const qd = DATA.quarterly[year];
+  [charts.revenue.data.labels, charts.revenue.data.datasets[0].data,
+   charts.revenue.data.datasets[1].data, charts.revenue.data.datasets[2].data] =
+  [qd.labels, qd.revenue, qd.profit, qd.revenue];
+  charts.revenue.update();
+
+  /* MoM chart */
+  const md = DATA.mom[year];
+  charts.mom.data.labels = md.labels;
+  charts.mom.data.datasets[0].data = md.values;
+  charts.mom.data.datasets[0].backgroundColor = charts.mom._mkColors(md.values);
+  charts.mom.update();
+
+  /* New vs Returning chart */
+  const nd = DATA.nvr[year];
+  [charts.nvr.data.labels, charts.nvr.data.datasets[0].data, charts.nvr.data.datasets[1].data] =
+  [nd.labels, nd.retC, nd.newC];
+  charts.nvr.update();
+}
+
+/* ═══════════════════════════════════════
+   DARK MODE TOGGLE
+═══════════════════════════════════════ */
+function toggleDark() {
+  const going = document.documentElement.getAttribute('data-theme') !== 'dark';
+  document.documentElement.setAttribute('data-theme', going ? 'dark' : 'light');
+  document.getElementById('darkToggle').textContent = going ? '☀️ Light Mode' : '🌙 Dark Mode';
+
+  const [gc, tc, lc] = [gridColor(), tickColor(), legColor()];
+  Object.values(charts).forEach(chart => {
+    const s = chart.options.scales;
+    if (s) Object.values(s).forEach(ax => {
+      if (ax.grid && ax.grid.display !== false) ax.grid.color = gc;
+      if (ax.ticks) ax.ticks.color = tc;
+    });
+    const ll = chart.options.plugins?.legend?.labels;
+    if (ll) ll.color = lc;
+    chart.update('none');
+  });
+}
+</script>
+</body>
+</html>

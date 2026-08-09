@@ -1,0 +1,5 @@
+"order_status","order_count","gross_revenue","avg_line_value"
+"Delivered",3895,4655466.91,400.26
+"Shipped",591,726877.07,415.83
+"Processing",348,414420.21,386.95
+"Cancelled",166,224473.12,442.75

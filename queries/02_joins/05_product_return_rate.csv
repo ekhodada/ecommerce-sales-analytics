@@ -1,0 +1,26 @@
+product_id,product_name,category,units_sold,units_returned,return_rate_pct
+13,Stapler Heavy Duty,Office Supplies,1523,68,4.46
+12,Whiteboard 48x36,Office Supplies,1448,58,4.01
+15,Ergonomic Office Chair,Furniture,1543,61,3.95
+18,Filing Cabinet 3-Drawer,Furniture,1517,56,3.69
+17,Bookshelf 5-Tier,Furniture,1531,56,3.66
+7,Webcam HD 1080p,Electronics,1521,55,3.62
+22,Polo Shirt Pack 3,Clothing,1533,53,3.46
+5,USB-C Hub 7-port,Electronics,1592,55,3.45
+9,Premium Notebook A4,Office Supplies,1409,44,3.12
+2,Wireless Mouse X300,Electronics,1536,47,3.06
+4,4K Monitor 27-inch,Electronics,1543,47,3.05
+25,Energy Bar Pack 12,Food & Beverages,1421,42,2.96
+24,Green Tea Assorted 50ct,Food & Beverages,1543,45,2.92
+21,Blazer Classic Fit,Clothing,1387,40,2.88
+8,Portable SSD 1TB,Electronics,1523,43,2.82
+23,Premium Coffee Beans 1kg,Food & Beverages,1471,41,2.79
+20,Formal Trousers,Clothing,1496,40,2.67
+16,Standing Desk Electric,Furniture,1551,40,2.58
+14,Paper Ream A4 500 sheets,Office Supplies,1449,36,2.48
+1,Laptop Pro 15,Electronics,1538,36,2.34
+19,Business Casual Shirt,Clothing,1482,33,2.23
+11,Desk Organizer Pro,Office Supplies,1539,34,2.21
+10,Ballpoint Pen Set 12,Office Supplies,1469,31,2.11
+6,Noise Cancelling Headphones,Electronics,1480,30,2.03
+3,Mechanical Keyboard,Electronics,1549,30,1.94

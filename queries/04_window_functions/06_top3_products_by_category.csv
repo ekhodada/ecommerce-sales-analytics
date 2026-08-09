@@ -1,0 +1,16 @@
+category,product_name,units_sold,revenue,rank_in_category
+Clothing,Blazer Classic Fit,1326,150088.74,1
+Clothing,Formal Trousers,1454,95496.96,2
+Clothing,Business Casual Shirt,1439,67435.61,3
+Electronics,Laptop Pro 15,1465,1785925.35,1
+Electronics,4K Monitor 27-inch,1488,626632.62,2
+Electronics,Noise Cancelling Headphones,1446,271825.54,3
+Food & Beverages,Premium Coffee Beans 1kg,1409,32958.41,1
+Food & Beverages,Energy Bar Pack 12,1377,25932.23,2
+Food & Beverages,Green Tea Assorted 50ct,1487,20877.88,3
+Furniture,Standing Desk Electric,1494,984010.06,1
+Furniture,Ergonomic Office Chair,1487,489425.13,2
+Furniture,Filing Cabinet 3-Drawer,1481,264778.69,3
+Office Supplies,Whiteboard 48x36,1413,119982.87,1
+Office Supplies,Desk Organizer Pro,1507,49443.43,2
+Office Supplies,Stapler Heavy Duty,1490,35037.60,3
