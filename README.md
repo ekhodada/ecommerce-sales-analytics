@@ -140,6 +140,4 @@ Open a `.sql` file from the `queries/` folder in DBeaver, DataGrip, or pgAdmin a
 ---
 
 ## Contact
-
-**Elnaz** — open to Data Analyst opportunities  
 [LinkedIn](https://www.linkedin.com/in/elnaz-khodadadi-547868a6/) · [GitHub](#)
