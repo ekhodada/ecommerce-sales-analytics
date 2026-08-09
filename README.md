@@ -120,9 +120,21 @@ FROM rfm;
 Open `Dashboard/index.html` directly in any browser — no server required.  
 Features: year filter (2022 / 2023 / 2024), dark mode toggle, 9 interactive charts.
 
-![Dashboard Overview](screenshots/dashboard_overview.png)
-![Revenue Charts](screenshots/dashboard_revenue.png)
-![Dark Mode](screenshots/dashboard_dark.png)
+**Quarterly Revenue & Profit** — 3-year trend with revenue bars, gross profit overlay, and trend line
+
+![Quarterly Revenue & Profit](screenshots/quarterly-revenue-profit.png)
+
+**Month-over-Month Revenue Growth** — 35-month volatility view; green = growth, red = decline
+
+![Month-over-Month Revenue Growth](screenshots/mom-revenue-growth.png)
+
+**Revenue by Customer Segment** — dual-axis chart comparing revenue ($) and order volume per tier
+
+![Revenue by Customer Segment](screenshots/revenue-by-segment.png)
+
+**Top 10 Products by Units Sold** — ranked product performance across all orders
+
+![Top 10 Products by Units Sold](screenshots/top-products.png)
 
 ---
 
