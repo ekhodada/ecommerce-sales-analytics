@@ -1,15 +1,13 @@
 # E-Commerce Sales Analytics — Data Analyst Portfolio
-
-> **Role applied for:** Data Analyst · 3 years of experience  
-> **Stack:** PostgreSQL · Python (Faker) · Chart.js  
+ 
+> **Stack:** PostgreSQL · Python · Chart.js  
 > **Domain:** E-Commerce / Retail · Jan 2022 – Dec 2024
 
 ---
 
 ## Overview
 
-End-to-end analytics project built on a simulated production-grade e-commerce database.  
-Covers the full data analyst workflow: schema design → synthetic data generation → 40+ SQL queries → interactive dashboard.
+End-to-end analytics project built on a production-grade e-commerce database.  
 
 - **600 customers · 4,834 orders · $5.8M revenue · 48.2% margin**
 - 5 product categories · 7 sales reps · 5 regions · 3 fiscal years
@@ -36,10 +34,7 @@ dim_employees ─────┘    fact_returns ────────┘    
 .
 ├── .gitignore
 ├── schema/
-│   └── 01_create_tables.sql           # Full DDL: tables, constraints, indexes
-├── data/
-│   ├── 00_setup_database.py           # DB connection setup
-│   └── 02_generate_synthetic_data.py  # Python + Faker synthetic data generator
+│   └── 01_create_tables.sql           # Full DDL: tab
 └── queries/
     ├── 01_Basic Queries/              # Filtering, sorting, CASE, date functions
     ├── 02_joins/                      # INNER, LEFT, FULL OUTER, anti-joins
@@ -67,7 +62,6 @@ Each query folder contains a `.sql` file with inline comments and a matching `.c
 | **Date & Time** | DATE_TRUNC, EXTRACT, fiscal quarters, date arithmetic |
 | **Data Quality** | NULL checks, duplicate detection, referential integrity, outlier flags |
 | **Business Analysis** | RFM segmentation, cohort retention, MoM/YoY growth, moving averages |
-| **Python** | Synthetic data generation with Faker, psycopg2 DB loading |
 
 ---
 
@@ -130,11 +124,6 @@ Features: year filter (2022 / 2023 / 2024), dark mode toggle, 9 interactive char
 
 ## Quick Start
 
-### Prerequisites
-```bash
-pip install psycopg2-binary faker pandas
-```
-
 ### 1. Create the database
 ```sql
 CREATE DATABASE retail_analytics;
@@ -145,12 +134,7 @@ CREATE DATABASE retail_analytics;
 psql -U postgres -d retail_analytics -f schema/01_create_tables.sql
 ```
 
-### 3. Generate synthetic data
-```bash
-python data/02_generate_synthetic_data.py
-```
-
-### 4. Run any query
+### 3. Run any query
 Open a `.sql` file from the `queries/` folder in DBeaver, DataGrip, or pgAdmin and execute against `retail_analytics`.
 
 ---
@@ -158,4 +142,4 @@ Open a `.sql` file from the `queries/` folder in DBeaver, DataGrip, or pgAdmin a
 ## Contact
 
 **Elnaz** — open to Data Analyst opportunities  
-[LinkedIn](#) · [GitHub](#)
+[LinkedIn](https://www.linkedin.com/in/elnaz-khodadadi-547868a6/) · [GitHub](#)
