@@ -120,6 +120,10 @@ FROM rfm;
 Open `Dashboard/index.html` directly in any browser — no server required.  
 Features: year filter (2022 / 2023 / 2024), dark mode toggle, 9 interactive charts.
 
+![Dashboard Overview](screenshots/dashboard_overview.png)
+![Revenue Charts](screenshots/dashboard_revenue.png)
+![Dark Mode](screenshots/dashboard_dark.png)
+
 ---
 
 ## Quick Start
