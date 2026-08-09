@@ -1,6 +1,6 @@
 # E-Commerce Sales Analytics — Data Analyst Portfolio
  
-> **Stack:** PostgreSQL · Python · Chart.js  
+> **Stack:** PostgreSQL · Chart.js  
 > **Domain:** E-Commerce / Retail · Jan 2022 – Dec 2024
 
 ---

@@ -24,3 +24,6 @@ data/02_generate_synthetic_data.py
 
 # Tableau temporary files
 *.twbx.bak
+
+# Python setup scripts — local use only
+data/
